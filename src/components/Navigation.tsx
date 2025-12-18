@@ -1,0 +1,108 @@
+import { useEffect, useState } from 'react';
+
+function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <button
+          onClick={() => scrollToSection('hero')}
+          className="text-xl font-serif font-bold text-white tracking-wide hover:text-[#f5c96c] transition-colors"
+        >
+          Kairos Lux Works
+        </button>
+
+        <div className="hidden md:flex items-center space-x-8">
+          <button
+            onClick={() => scrollToSection('compass')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            How we work
+          </button>
+          <button
+            onClick={() => scrollToSection('discern-clarify')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            Discern
+          </button>
+          <button
+            onClick={() => scrollToSection('design-decide')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            Design
+          </button>
+          <button
+            onClick={() => scrollToSection('mission-impact')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            Mission Impact
+          </button>
+          <button
+            onClick={() => scrollToSection('kairos-labs')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            Kairos Labs
+          </button>
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          >
+            Contact
+          </button>
+        </div>
+
+        <div className="md:hidden flex flex-wrap gap-3 text-xs">
+          <button onClick={() => scrollToSection('compass')} className="text-gray-200 hover:text-[#f5c96c]">
+            How we work
+          </button>
+          <button onClick={() => scrollToSection('discern-clarify')} className="text-gray-200 hover:text-[#f5c96c]">
+            Discern
+          </button>
+          <button onClick={() => scrollToSection('design-decide')} className="text-gray-200 hover:text-[#f5c96c]">
+            Design
+          </button>
+          <button onClick={() => scrollToSection('mission-impact')} className="text-gray-200 hover:text-[#f5c96c]">
+            Impact
+          </button>
+          <button onClick={() => scrollToSection('kairos-labs')} className="text-gray-200 hover:text-[#f5c96c]">
+            Labs
+          </button>
+          <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-[#f5c96c]">
+            About
+          </button>
+          <button onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-[#f5c96c]">
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navigation;
