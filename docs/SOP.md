@@ -1,5 +1,3 @@
-```md
-
 # KLW Website SOP (to prevent drift)
 
 ## Source of truth
