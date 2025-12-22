@@ -1,8 +1,15 @@
 function KairosLabs() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="kairos-labs" className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">
               Non-profit arm
@@ -14,7 +21,7 @@ function KairosLabs() {
 
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Kairos Labs is the emerging non-profit arm of the Kairos Guild—the wider ecosystem of method, institute, and consultancy we are building around AI and Catholic Social Teaching.
+                Kairos Labs is the emerging non-profit arm of the <strong>Kairos Guild</strong>—the wider ecosystem of method, institute, and consultancy we are building around AI and Catholic Social Teaching.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -25,13 +32,12 @@ function KairosLabs() {
                 Labs will weave together action-research (following real teams as AI enters their work), theological reflection, and technical prototyping. The goal is to generate methods, curricula, and shared tools that can be reused by religious orders and universities, social ministries and humanitarian agencies.
               </p>
 
-              <p className="text-lg text-gray-700 leading-relaxed">
-                As an early offering, we are also prototyping <strong>Kairos Circuit</strong> – a short, periodic brief on Catholic AI projects, emerging Church teaching on AI, and what Pope Leo and others are saying and doing. You can register interest through the contact form.
-              </p>
-
-              <p className="text-lg text-gray-700 leading-relaxed">
-                If this resonates—whether you are in consecrated life, a university or research centre, a foundation, or a social ministry—we would be glad to discern together what a partnership could look like. Use the contact form below and your message will reach Felix and the Kairos Lux Works team.
-              </p>
+              <div className="border-l-4 border-[#f5c96c] pl-6 mt-6">
+                <p className="text-lg text-gray-700 leading-relaxed italic">
+                  "Cultivate moral discernment as a fundamental part of their work—to develop systems that reflect justice, solidarity, and a genuine reverence for life."
+                </p>
+                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV (Builders AI Forum message)</p>
+              </div>
             </div>
           </div>
 
@@ -41,6 +47,23 @@ function KairosLabs() {
               alt="Golden church doorway with people walking into radiant light"
               className="guild-doorway-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
             />
+          </div>
+        </div>
+
+        <div className="border-t border-[#0b1120]/10 pt-8 mt-12">
+          <div className="bg-gradient-to-br from-[#f8f5f0] to-white border-2 border-[#f5c96c]/40 rounded-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-serif font-bold text-[#0b1120] mb-4">
+              Building partnerships for the future
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              If this resonates—whether you are in consecrated life, a university or research centre, a foundation, or a social ministry—we would be glad to discern together what a partnership could look like.
+            </p>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-3 bg-[#f5c96c] text-[#0b1120] font-semibold rounded hover:bg-[#f5d88a] transition-all shadow-lg hover:shadow-[#f5c96c]/50"
+            >
+              Start a conversation
+            </button>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ function Hero() {
 
           <div className="space-y-4 pt-4">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Kairos Lux Works LLC is a CST-aligned strategy partner accompanying institutions who are feeling real pressure—financial, cultural, technological—yet want to stay faithful to their mission and values. Rooted in Dallas, we are building trans-Atlantic collaborations, including Rome, to keep the work close to the universal Church.
+              Kairos Lux Works LLC is a CST-aligned strategy partner accompanying institutions who are feeling real pressure—financial, cultural, technological—yet want to stay faithful to their mission and values.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">

@@ -40,14 +40,21 @@ function About() {
                   The vision
                 </h3>
                 <p className="text-gray-200 leading-relaxed">
-                  Building the kind of economy Christ would want us to build – a cooperative ecosystem helping organisations and communities grow in resilience by redesigning work, supporting strategic decisions, and helping our institutions adapt to deep transformation, thickening CST's visible sacramental reality in our society in the process.
+                  Building the kind of economy Christ would want to belong to and participate in. Inspired by CST encyclicals' economic paradigm expressing divine love, we are creating a cooperative ecosystem helping organisations and communities grow in resilience by redesigning work, supporting strategic decisions, and helping our institutions adapt to deep transformation, thickening CST's visible sacramental reality in our society in the process.
                 </p>
               </div>
 
               <div className="border-t border-white/10 pt-6">
                 <p className="text-sm text-gray-300">
-                  Kairos Lux Works LLC is registered in Dallas, Texas.
+                  Kairos Lux Works LLC is registered in Dallas, Texas. We are building collaborations across Dallas and Rome.
                 </p>
+              </div>
+
+              <div className="border-l-4 border-[#f5c96c] pl-6 mt-6">
+                <p className="text-lg text-gray-200 leading-relaxed italic">
+                  "This epochal transformation requires responsibility and discernment to ensure that AI is developed and utilized for the common good."
+                </p>
+                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV (AI for Good Summit message)</p>
               </div>
             </div>
           </div>
