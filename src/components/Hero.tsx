@@ -27,15 +27,19 @@ function Hero() {
 
           <div className="space-y-4 pt-4">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Kairos Lux Works LLC is a Texas-based consultancy accompanying CST-aligned institutions who are feeling real pressure—financial, cultural, technological—yet want to stay faithful to their mission and values.
+              Kairos Lux Works LLC is a CST-aligned strategy partner accompanying institutions who are feeling real pressure—financial, cultural, technological—yet want to stay faithful to their mission and values. Rooted in Dallas, we are building trans-Atlantic collaborations, including Rome, to keep the work close to the universal Church.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              We help you see options that are hard to notice from inside that pressure: using AI to relieve reporting and coordination burdens, free more time for people and presence, and support more dignified, creative work for your teams and the people you serve. We help you resist the dominant Silicon Valley narrative of speed, scale, and disruption, and instead use AI as a tool for institutional flourishing and for the economy Christ calls us to build.
+              We help you see options that are hard to notice from inside that pressure: using AI to relieve reporting and coordination burdens, free more time for people and presence, and support more dignified, creative work for your teams and the people you serve.
+            </p>
+
+            <p className="text-lg text-gray-300 leading-relaxed">
+              We help you resist the dominant Silicon Valley narrative of speed, scale, and disruption, and instead use AI as a tool for institutional flourishing and for the economy Christ calls us to build.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start sm:items-center">
             <button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-3 bg-[#f5c96c] text-[#0b1120] font-semibold rounded hover:bg-[#f5d88a] transition-all shadow-lg hover:shadow-[#f5c96c]/50"
@@ -45,7 +49,7 @@ function Hero() {
 
             <button
               onClick={() => scrollToSection('compass')}
-              className="px-8 py-3 border-2 border-[#f5c96c] text-[#f5c96c] font-semibold rounded hover:bg-[#f5c96c]/10 transition-all"
+              className="text-sm text-[#f5c96c] font-semibold underline underline-offset-4 hover:text-[#f5d88a] transition-colors"
             >
               See how we work
             </button>

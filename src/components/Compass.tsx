@@ -6,7 +6,7 @@ function Compass() {
       number: '01',
       icon: Search,
       title: 'Deep listening to people and mission',
-      description: 'We start from stories, not tools—the charism, history, and concrete pressures of your community.',
+      description: 'We start from stories, not tools—the charism, history, and concrete pressures and aspirations of your community.',
     },
     {
       number: '02',
@@ -78,11 +78,54 @@ function Compass() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#0b1120]/10 pt-8">
+        <div className="mt-12 border-t border-[#0b1120]/10 pt-8 space-y-4">
           <p className="text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Discern & Clarify → Design & Decide → Mission Impact Enhancement<br/>
-            <span className="text-sm">The sections below unpack what that looks like in practice.</span>
+            The sections below unpack what this looks like in practice.
           </p>
+
+          <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <a
+              href="#discern-clarify"
+              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-5 py-4 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
+            >
+              <div>
+                <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 1</p>
+                <p className="text-lg font-semibold text-[#0b1120]">Discern & Clarify</p>
+                <p className="text-sm text-gray-600">Shared language and grounded priorities.</p>
+              </div>
+              <span className="text-[#f5c96c] font-semibold text-xl group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
+
+            <a
+              href="#design-decide"
+              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-5 py-4 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
+            >
+              <div>
+                <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 2</p>
+                <p className="text-lg font-semibold text-[#0b1120]">Design & Decide</p>
+                <p className="text-sm text-gray-600">Focused options, CST guardrails, and clear choices.</p>
+              </div>
+              <span className="text-[#f5c96c] font-semibold text-xl group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
+
+            <a
+              href="#mission-impact"
+              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-5 py-4 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
+            >
+              <div>
+                <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 3</p>
+                <p className="text-lg font-semibold text-[#0b1120]">Mission Impact Work</p>
+                <p className="text-sm text-gray-600">Build and pilot the plan with your teams.</p>
+              </div>
+              <span className="text-[#f5c96c] font-semibold text-xl group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

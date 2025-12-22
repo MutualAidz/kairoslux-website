@@ -1,4 +1,4 @@
-import { Phone, Zap, Search, Rocket } from 'lucide-react';
+import { Zap, Search } from 'lucide-react';
 
 function StrategyPilots() {
   const scrollToSection = (id: string) => {
@@ -12,7 +12,7 @@ function StrategyPilots() {
     {
       icon: Zap,
       title: 'Discernment Sprint (2–3 weeks)',
-      description: 'A focused 2–3 week engagement. Through a handful of interviews, light review of your workflows and data landscape, and a few working sessions, we propose one or two high-leverage workflows where AI could help you do more with less. Each comes with CST-grounded guardrails and questions to carry into governance.',
+      description: 'A focused 2–3 week engagement. Through a handful of interviews, light review of your workflows and data landscape (including data readiness and institutional memory practices), and a few working sessions, we propose one or two high-leverage workflows where AI could help you do more with less. Each comes with CST-grounded guardrails and questions to carry into governance.',
       buttonText: null,
     },
     {

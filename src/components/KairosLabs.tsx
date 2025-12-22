@@ -1,11 +1,4 @@
 function KairosLabs() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="kairos-labs" className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">

@@ -1,9 +1,9 @@
 # KLW Website SOP (to prevent drift)
 
 ## Source of truth
-1) `docs/KLW_MASTER_CONTROL_SPEC.md` (constraints + style rules)
-2) `docs/KLW_WEBSITE_COPY_CANONICAL.md` (approved copy)
-3) `docs/KLW_REVISION_HISTORY.md` (what changed and why)
+1) `docs/KLW_MASTER_CONTROL_SPEC_v01.md` (constraints + style rules)
+2) `docs/KLW_WEBSITE_COPY_v01_CANONICAL.md` (approved copy)
+3) `docs/KLW_REVISION_HISTORY_v01.md` (what changed and why)
 
 ## Update cycle (every iteration)
 1. Decide the goal of this iteration (1–3 bullets).
@@ -13,7 +13,7 @@
    - Hero + nav
    - One mid-page section (e.g., Kairos Compass)
    - Footer / contact
-5. Update `docs/KLW_REVISION_HISTORY.md`:
+5. Update `docs/KLW_REVISION_HISTORY_v01.md`:
    - Date
    - What changed (short)
    - Why (tie to spec / feedback)

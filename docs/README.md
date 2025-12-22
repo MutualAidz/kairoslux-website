@@ -5,9 +5,9 @@ This repo contains the Kairos Lux Works marketing site (Vite + React + Tailwind)
 ## Quick links
 - **Staging site:** https://beta.kairoslux.ai
 - **Docs (north star):** ./docs/README.md
-- **Master control spec:** ./docs/KLW_MASTER_CONTROL_SPEC.md
-- **Canonical site copy:** ./docs/KLW_WEBSITE_COPY_CANONICAL.md
-- **Revision history:** ./docs/KLW_REVISION_HISTORY.md
+- **Master control spec:** ./docs/KLW_MASTER_CONTROL_SPEC_v01.md
+- **Canonical site copy:** ./docs/KLW_WEBSITE_COPY_v01_CANONICAL.md
+- **Revision history:** ./docs/KLW_REVISION_HISTORY_v01.md
 
 ## Editing workflow (non-technical friendly)
 1. Edit files directly in GitHub (web editor) and commit to `main`.
@@ -34,10 +34,10 @@ How we avoid “context drift”
 
 Before making content changes:
 
-    Read docs/KLW_MASTER_CONTROL_SPEC.md
+    Read docs/KLW_MASTER_CONTROL_SPEC_v01.md
 
-    Use only approved language from docs/KLW_WEBSITE_COPY_CANONICAL.md
+    Use only approved language from docs/KLW_WEBSITE_COPY_v01_CANONICAL.md
 
 After making changes:
 
-    Update docs/KLW_REVISION_HISTORY.md with what changed and why.
+    Update docs/KLW_REVISION_HISTORY_v01.md with what changed and why.
