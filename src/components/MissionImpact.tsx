@@ -25,21 +25,21 @@ function MissionImpact() {
   ];
 
   return (
-    <section id="mission-impact" className="py-20 px-6 bg-white">
+    <section id="mission-impact" className="py-20 px-6 bg-[#0b1930] text-white">
       <div className="max-w-7xl mx-auto">
-        <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold mb-4">
+        <p className="text-sm uppercase tracking-wider text-white/70 font-semibold mb-4">
           Path 3
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0b1120] mb-6">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
           Mission Impact Work
         </h2>
 
-        <h3 className="text-2xl font-serif text-gray-700 mb-6">
+        <h3 className="text-2xl font-serif text-gray-100 mb-6">
           Workflows and projects that put discernment into practice.
         </h3>
 
-        <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-12">
+        <p className="text-lg text-gray-200 leading-relaxed max-w-4xl mb-12">
           Path 2 designs the plan; Path 3 implements it with your teams. Once a direction is chosen, we collaborate on carefully scoped workflows and projects—sometimes pilots, sometimes small internal tools—that test what's possible without over-engineering.
         </p>
 

@@ -11,7 +11,10 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const subject = 'Kairos Lux Works — Website inquiry';
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization/community: ${formData.organization}\nMessage: ${formData.message}`;
+    const mailtoLink = `mailto:hello@kairoslux.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,6 +57,7 @@ function Contact() {
                     hello@kairoslux.ai
                   </a>
                   <p className="text-xs text-gray-400 mt-2">Messages reach Felix Navarrete and the Kairos Lux Works team.</p>
+                  <p className="text-xs text-gray-400 mt-1">This form opens your email client; it does not store data.</p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import LeoQuotes from './components/LeoQuotes';
 import Compass from './components/Compass';
 import FormationLabs from './components/FormationLabs';
 import StrategyPilots from './components/StrategyPilots';
@@ -13,6 +14,7 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       <Hero />
+      <LeoQuotes />
       <Compass />
       <FormationLabs />
       <StrategyPilots />
