@@ -2,7 +2,6 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import TwoWaysToEngage from './components/TwoWaysToEngage';
 import LeoQuotes from './components/LeoQuotes';
-import InteractiveJourneyMap from './components/InteractiveJourneyMap';
 import Compass from './components/Compass';
 import FormationLabs from './components/FormationLabs';
 import StrategyPilots from './components/StrategyPilots';
@@ -18,7 +17,6 @@ function App() {
       <Hero />
       <TwoWaysToEngage />
       <LeoQuotes />
-      <InteractiveJourneyMap />
       <Compass />
       <FormationLabs />
       <StrategyPilots />
