@@ -61,7 +61,8 @@ function Contact() {
                 <p className="text-base text-gray-700 leading-relaxed italic">
                   "AI must reflect the Creator's design: intelligent, relational, and guided by love."
                 </p>
-                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV (Builders AI Forum message)</p>
+                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV</p>
+                <p className="text-sm text-gray-500 mt-1">Builders AI Forum message</p>
               </div>
             </div>
           </div>

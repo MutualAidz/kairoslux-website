@@ -36,7 +36,8 @@ function KairosLabs() {
                 <p className="text-lg text-gray-700 leading-relaxed italic">
                   "Cultivate moral discernment as a fundamental part of their work—to develop systems that reflect justice, solidarity, and a genuine reverence for life."
                 </p>
-                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV (Builders AI Forum message)</p>
+                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV</p>
+                <p className="text-sm text-gray-500 mt-1">Builders AI Forum message</p>
               </div>
             </div>
           </div>

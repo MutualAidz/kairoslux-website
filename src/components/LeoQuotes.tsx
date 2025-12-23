@@ -6,7 +6,8 @@ function LeoQuotes() {
           <p className="text-2xl md:text-3xl leading-relaxed mb-4 font-serif">
             "Intelligence — whether artificial or human — finds its fullest meaning in love, freedom and relationship with God."
           </p>
-          <p className="text-sm text-[#f5c96c] font-semibold">— Pope Leo XIV (Builders AI Forum message)</p>
+          <p className="text-sm text-[#f5c96c] font-semibold">— Pope Leo XIV</p>
+          <p className="text-sm text-gray-400 mt-1">Builders AI Forum message</p>
         </div>
       </div>
     </section>

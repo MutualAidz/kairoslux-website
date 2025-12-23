@@ -54,7 +54,8 @@ function About() {
                 <p className="text-lg text-gray-200 leading-relaxed italic">
                   "This epochal transformation requires responsibility and discernment to ensure that AI is developed and utilized for the common good."
                 </p>
-                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV (AI for Good Summit message)</p>
+                <p className="text-sm text-[#f5c96c] font-semibold mt-2">— Pope Leo XIV</p>
+                <p className="text-sm text-gray-400 mt-1">AI for Good Summit message</p>
               </div>
             </div>
           </div>
