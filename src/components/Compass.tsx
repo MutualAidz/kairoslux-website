@@ -5,34 +5,34 @@ function Compass() {
     {
       number: '01',
       icon: Search,
-      title: 'Deep listening to people and mission',
-      description: 'We start from stories, not tools—the charism, history, and concrete pressures and aspirations of your community.',
+      title: 'Listen for mission',
+      description: 'We start from stories, charisms, and real constraints—so the problem is named in the light of mission, not tools.',
     },
     {
       number: '02',
       icon: Map,
-      title: 'Mapping workflows and bottlenecks',
-      description: 'We look beyond the chatbot window at real constraints and workflows, identifying where AI support might relieve unnecessary load or open new space for mission.',
+      title: 'Map the work',
+      description: 'We look beyond the chatbot window at workflows, bottlenecks, and decision points where change would actually help.',
     },
     {
       number: '03',
       icon: Book,
-      title: 'Letting Catholic Social Teaching and tradition speak into decisions',
-      description: 'We name the CST values already shaping your institution, and begin to bring relevant texts and traditions alongside them so they can guide concrete choices about tools, workflows, and budgets—grounding decisions in a living body of moral intelligence rather than vendor pressure or hunches.',
+      title: 'Let CST guide choices',
+      description: 'We bring Catholic Social Teaching into concrete tradeoffs—governance, policy, budgets, and what you refuse to sacrifice.',
     },
     {
       number: '04',
       icon: Zap,
-      title: 'Designing focused, high‑impact changes',
-      description: 'We work with you to identify high-leverage changes—specific workflows and decisions where AI support will most directly ease pressure and advance your mission—and then build momentum by starting there.',
+      title: 'Design high‑leverage changes',
+      description: 'We identify a small set of focused moves that reduce burden and build momentum without over‑engineering.',
     },
   ];
 
   return (
-    <section id="compass" className="py-20 px-6 bg-[#f8f5f0]">
+    <section id="compass" className="py-16 px-6 bg-[#f8f5f0]">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
+          <div className="space-y-5">
             <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">
               How we work
             </p>
@@ -42,25 +42,29 @@ function Compass() {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Kairos Compass is our evolving framework for CST-grounded discernment about AI and work. It's how we bring intelligence and spirit into the same conversation, and how we move from anxiety to clear next steps.
+              Kairos Compass is our evolving framework for CST-grounded discernment about AI and work—so mission stays primary as technology changes around you. It helps leadership teams move from anxiety to clear next steps without hype, blanket rejection, or vendor capture.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold pt-6">
+              Four Compass practices
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-3">
               {principles.map((principle) => {
                 const Icon = principle.icon;
                 return (
-                  <div key={principle.number} className="flex flex-col gap-3 group">
+                  <div key={principle.number} className="flex flex-col gap-2 group">
                     <div className="flex items-center gap-3">
                       <div className="flex-shrink-0">
                         <div className="w-10 h-10 rounded-full bg-[#0b1120] flex items-center justify-center group-hover:bg-[#f5c96c] transition-colors">
                           <Icon className="w-5 h-5 text-[#f5c96c] group-hover:text-[#0b1120]" />
                         </div>
                       </div>
-                      <h3 className="font-semibold text-[#0b1120] text-sm">
+                      <h3 className="font-semibold text-[#0b1120] text-base">
                         {principle.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-gray-600 leading-relaxed text-sm pl-13">
                       {principle.description}
                     </p>
                   </div>
