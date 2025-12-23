@@ -28,7 +28,7 @@ function MissionImpact() {
     <section id="mission-impact" className="py-20 px-6 bg-[#0b1930] text-white">
       <div className="max-w-7xl mx-auto">
         <p className="text-sm uppercase tracking-wider text-white/70 font-semibold mb-4">
-          Path 3
+          Movement 3
         </p>
 
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
@@ -40,7 +40,7 @@ function MissionImpact() {
         </h3>
 
         <p className="text-lg text-gray-200 leading-relaxed max-w-4xl mb-12">
-          Path 2 designs the plan; Path 3 implements it with your teams. Once a direction is chosen, we collaborate on carefully scoped workflows and projects—sometimes pilots, sometimes small internal tools—that test what's possible without over-engineering.
+          Movement 2 designs the plan; Movement 3 implements it with your teams. Once a direction is chosen, we collaborate on carefully scoped workflows and projects—sometimes pilots, sometimes small internal tools—that test what's possible without over-engineering.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

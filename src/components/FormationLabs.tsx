@@ -14,7 +14,7 @@ function FormationLabs() {
     <section id="discern-clarify" className="py-20 px-6 bg-[#0b1930]">
       <div className="max-w-7xl mx-auto">
         <p className="text-sm uppercase tracking-wider text-white/70 font-semibold mb-4">
-          Path 1
+          Movement 1
         </p>
 
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
