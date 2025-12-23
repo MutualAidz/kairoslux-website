@@ -142,55 +142,6 @@ function Compass() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#0b1120]/10 pt-8 space-y-4">
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <a
-              href="#discern-clarify"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 1</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Discern & Clarify</p>
-                <p className="text-base text-gray-600">Shared language and grounded priorities.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-
-            <a
-              href="#design-decide"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 2</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Design & Decide</p>
-                <p className="text-base text-gray-600">Focused options, CST guardrails, and clear choices.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-
-            <a
-              href="#mission-impact"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Path 3</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Mission Impact Work</p>
-                <p className="text-base text-gray-600">Build and pilot the plan with your teams.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-          </div>
-
-          <p className="text-sm text-gray-500 text-center mt-6 max-w-3xl mx-auto">
-            Most engagements start as a bounded call, sprint, or pilot—so we can learn quickly, protect staff capacity, and avoid over-promising.
-          </p>
-        </div>
       </div>
     </section>
   );
