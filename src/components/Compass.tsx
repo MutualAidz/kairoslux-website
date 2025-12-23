@@ -125,7 +125,7 @@ function Compass() {
               Mission work domains
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Common workflows where AI can reduce burden and strengthen mission—when guided by CST and good governance.
+              Common workflows where AI can help to reduce reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work for your teams and the people you serve—so institutions can move deliberately to heal and serve.
             </p>
           </div>
 
