@@ -5,8 +5,8 @@ function FormationLabs() {
       description: 'A 60–90 minute conversation with key decision-makers to surface hopes, fears, existing experiments, and constraints. You receive a short Kairos Note summarising what we heard, how we see the situation through CST, and whether the best next step is formation, a design sprint, or waiting.',
     },
     {
-      title: 'CST & AI Foundations Seminar (2–3 hours)',
-      description: 'A 2–3 hour session for boards, leadership teams, or AI task forces. We name the disruption and anxiety honestly, introduce AI through the lenses of Catholic Social Teaching and Pope Leo\'s teaching, and explore both real risks and upside possibilities. The goal is clarity and shared language, not hype or blanket rejection.',
+      title: 'CST & AI Foundations Briefing (90–120 min)',
+      description: 'A board or leadership team briefing we can facilitate. We name the disruption and anxiety honestly, introduce AI through the lenses of Catholic Social Teaching and Pope Leo\'s teaching, and explore both real risks and upside possibilities. The goal is clarity and shared language, not hype or blanket rejection.',
     },
   ];
 
@@ -21,9 +21,14 @@ function FormationLabs() {
           Discern & Clarify
         </h2>
 
-        <p className="text-lg text-gray-200 leading-relaxed max-w-4xl mb-12">
+        <p className="text-lg text-gray-200 leading-relaxed max-w-4xl mb-6">
           For leadership teams who need to name what is happening, what they hope for, and what they refuse to sacrifice.
         </p>
+
+        <div className="text-sm text-gray-300 max-w-4xl mb-12 space-y-1">
+          <p><span className="font-semibold">Decision-specific</span> → Discernment Call</p>
+          <p><span className="font-semibold">Shared baseline</span> → Foundations Briefing</p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {offerings.map((offering) => (
