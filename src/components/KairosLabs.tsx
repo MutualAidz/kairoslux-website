@@ -21,7 +21,11 @@ function KairosLabs() {
 
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Kairos Labs is the emerging non-profit arm of the <strong>Kairos Guild</strong>—the wider ecosystem of method, institute, and consultancy we are building around AI and Catholic Social Teaching.
+                Kairos Labs is the emerging non-profit arm of the <strong>Kairos Guild</strong>.
+              </p>
+
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Kairos Guild is the long-range ecosystem we're building: a living architecture linking Kairos Lux Works (LLC) and Kairos Labs (in formation) toward cooperative, CST-aligned tools and institutions. The Guild is a direction of travel—not a finished platform.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
