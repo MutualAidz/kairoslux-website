@@ -80,7 +80,7 @@ We use these practices to redesign mission work in common pressure points like t
 
 Mission work domains (6-card grid; appears immediately after Compass practices):
 Intro line:
-Common workflows where AI can help to relieve reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work—so institutions can move deliberately to heal and serve.
+Common workflows where AI can help to reduce reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work—so institutions can move deliberately to heal and serve.
 
 Domains:
 Stakeholder & relationship operations
@@ -122,7 +122,7 @@ Purpose:
 Build shared understanding in light of mission: name what is happening, what you hope for, and what you refuse to sacrifice.
 
 Offer 1 – AI Discernment Call
-A 60–90 minute working session with key decision‑makers to surface pressures, hopes, constraints, current experiments, and mission logic. You leave with a short written summary and a recommended next step.
+A 60–90 minute working session with key decision‑makers to surface pressures, hopes, constraints, current initiatives, and mission logic. You leave with a short written summary and a recommended next step.
 
 Offer 2 – CST & AI Foundations Seminar
 A tailored session for your leadership team, board, or AI task force. We connect your context with Catholic Social Teaching and concrete examples from similar institutions. The goal is shared language and clarity—without hype or blanket rejection.
@@ -209,7 +209,7 @@ Section heading:
 Coming soon: Kairos Circuit
 
 Body:
-Kairos Circuit will be a periodic dispatch on Catholic AI: what Pope Leo XIV and other Church voices are saying, how Catholic institutions are experimenting with AI, and where Spirit‑led creativity is emerging. It is meant for leaders who want to stay informed without drowning in noise.
+Kairos Circuit will be a periodic dispatch on Catholic AI: what Pope Leo XIV and other Church voices are saying, how Catholic institutions are navigating AI, and where Spirit‑led creativity is emerging. It is meant for leaders who want to stay informed without drowning in noise.
 
 It will sit under Kairos Lux Works LLC, in conversation with Kairos Labs as that research work develops.
 
