@@ -45,6 +45,15 @@ function Compass() {
               Kairos Compass is our evolving framework for CST-grounded discernment about AI and work. It's how we bring intelligence and spirit into the same conversation, and how we move from anxiety to clear next steps.
             </p>
 
+            <div className="bg-[#f5c96c]/10 border-l-4 border-[#f5c96c] p-6 rounded-r-lg my-6">
+              <h3 className="text-lg font-semibold text-[#0b1120] mb-2">
+                What we mean by redesigning work
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                AI adoption isn't a plug-in—it changes decisions, workflows, and architecture. We help institutions redesign work with CST as a real constraint: clearer governance, humane workflows, and tools that serve people rather than capture them.
+              </p>
+            </div>
+
             <div className="space-y-6 pt-4">
               {principles.map((principle) => {
                 const Icon = principle.icon;
