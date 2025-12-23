@@ -124,7 +124,7 @@ function Contact() {
 
               <div>
                 <label htmlFor="organizationType" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Who are you? (optional)
+                  Who are you? (Optional, but helpful!)
                 </label>
                 <select
                   id="organizationType"
@@ -177,7 +177,7 @@ function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold mb-2 text-gray-700">
-                  What would you like to explore?
+                  What decision, workflow or pressure point are you facing?
                 </label>
                 <textarea
                   id="message"
@@ -187,7 +187,7 @@ function Contact() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#f5c96c] text-gray-900 placeholder-gray-400 resize-none"
-                  placeholder="Tell us about your needs and interests..."
+                  placeholder="Example: &quot;We need board clarity on AI policy,&quot; or &quot;Reporting is consuming staff time,&quot; or &quot;We want a bounded pilot without vendor capture.&quot;"
                 />
               </div>
 
