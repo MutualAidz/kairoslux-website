@@ -35,8 +35,7 @@ function TwoWaysToEngage() {
               Kairos Labs (in formation)
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              An emerging nonprofit initiative focused on formation and action‑research.
-              Not yet incorporated. We're seeking host partners and sponsors to pilot learning series and publish what we learn.
+              A culture engine for formation, worker reskilling, and action‑research—building shared curricula and public‑good tools with partners and sponsors.
             </p>
             <button
               onClick={() => scrollToSection('kairos-labs')}

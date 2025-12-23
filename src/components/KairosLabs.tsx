@@ -16,12 +16,16 @@ function KairosLabs() {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0b1120]">
-              Kairos Labs – dignified and creative work in the AI age
+              Kairos Labs (in formation)
             </h2>
 
-            <div className="space-y-4">
+            <p className="text-xl text-gray-700 leading-relaxed font-semibold">
+              A culture engine for formation, worker reskilling, and action‑research—building shared curricula and public‑good tools with partners and sponsors.
+            </p>
+
+            <div className="space-y-4 mt-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Kairos Labs is the emerging non-profit arm of the <strong>Kairos Guild</strong>.
+                Kairos Labs (in formation) is the emerging non-profit arm of the <strong>Kairos Guild</strong>.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -29,7 +33,7 @@ function KairosLabs() {
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Kairos Labs focuses on formation and research around the future of work: worker reskilling for the AI age with a CST moral backbone; small cohorts and learning circles among those most exposed to automation; and tools that help communities redesign work rather than simply lose it.
+                Kairos Labs (in formation) focuses on formation and research around the future of work: worker reskilling for the AI age with a CST moral backbone; small cohorts and learning circles among those most exposed to automation; and tools that help communities redesign work rather than simply lose it.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">

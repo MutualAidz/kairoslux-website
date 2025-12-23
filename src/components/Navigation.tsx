@@ -81,7 +81,7 @@ function Navigation() {
             onClick={() => scrollToSection('kairos-labs')}
             className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
           >
-            Kairos Labs
+            Kairos Labs (in formation)
           </button>
           <button
             onClick={() => scrollToSection('about')}
