@@ -1,37 +1,43 @@
-import { Search, Map, Book, Zap } from 'lucide-react';
+import { Target, Users, BookOpen, Scale, Building2, Heart } from 'lucide-react';
 
 function Compass() {
-  const principles = [
+  const missionDomains = [
     {
-      number: '01',
-      icon: Search,
-      title: 'Deep listening to people and mission',
-      description: 'We start from stories, not tools—the charism, history, and concrete pressures and aspirations of your community.',
+      icon: Target,
+      title: 'Mission integrity',
+      description: 'Formation, charism, Catholic identity, tradition-grounded decisions',
     },
     {
-      number: '02',
-      icon: Map,
-      title: 'Mapping workflows and bottlenecks',
-      description: 'We look beyond the chatbot window at real constraints and workflows, identifying where AI support might relieve unnecessary load or open new space for mission.',
+      icon: Users,
+      title: 'People & relationships',
+      description: 'Donors, alumni, stakeholders, congregation, community engagement',
     },
     {
-      number: '03',
-      icon: Book,
-      title: 'Letting Catholic Social Teaching and tradition speak into decisions',
-      description: 'We name the CST values already shaping your institution, and begin to bring relevant texts and traditions alongside them so they can guide concrete choices about tools, workflows, and budgets—grounding decisions in a living body of moral intelligence rather than vendor pressure or hunches.',
+      icon: BookOpen,
+      title: 'Communications & narrative',
+      description: 'Reporting, storytelling, board updates, grant narratives, public witness',
     },
     {
-      number: '04',
-      icon: Zap,
-      title: 'Designing focused, high‑impact changes',
-      description: 'We work with you to identify high-leverage changes—specific workflows and decisions where AI support will most directly ease pressure and advance your mission—and then build momentum by starting there.',
+      icon: Scale,
+      title: 'Operations & governance',
+      description: 'Budgets, forecasts, program ops, decision support, visibility',
+    },
+    {
+      icon: Building2,
+      title: 'Institutional memory',
+      description: 'Archives, transitions, knowledge continuity, congregational wisdom',
+    },
+    {
+      icon: Heart,
+      title: 'Worker dignity & reskilling',
+      description: 'Formation, capability-building, meaningful work, accompaniment in transition',
     },
   ];
 
   return (
     <section id="compass" className="py-20 px-6 bg-[#f8f5f0]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">
               How we work
@@ -44,29 +50,6 @@ function Compass() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Kairos Compass is our evolving framework for CST-grounded discernment about AI and work. It's how we bring intelligence and spirit into the same conversation, and how we move from anxiety to clear next steps.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-              {principles.map((principle) => {
-                const Icon = principle.icon;
-                return (
-                  <div key={principle.number} className="flex flex-col gap-3 group">
-                    <div className="flex items-center gap-3">
-                      <div className="flex-shrink-0">
-                        <div className="w-10 h-10 rounded-full bg-[#0b1120] flex items-center justify-center group-hover:bg-[#f5c96c] transition-colors">
-                          <Icon className="w-5 h-5 text-[#f5c96c] group-hover:text-[#0b1120]" />
-                        </div>
-                      </div>
-                      <h3 className="font-semibold text-[#0b1120] text-sm">
-                        {principle.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      {principle.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
 
           <div className="flex justify-center items-start">
@@ -78,7 +61,35 @@ function Compass() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#0b1120]/10 pt-8 space-y-4">
+        <div className="mb-12">
+          <h3 className="text-2xl font-serif font-bold text-[#0b1120] mb-6 text-center">
+            Six Mission Domains
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {missionDomains.map((domain) => {
+              const Icon = domain.icon;
+              return (
+                <div key={domain.title} className="flex flex-col gap-3 group border border-[#0b1120]/10 rounded-lg p-6 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0b1120] flex items-center justify-center group-hover:bg-[#f5c96c] transition-colors">
+                        <Icon className="w-5 h-5 text-[#f5c96c] group-hover:text-[#0b1120]" />
+                      </div>
+                    </div>
+                    <h4 className="font-semibold text-[#0b1120] text-base">
+                      {domain.title}
+                    </h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {domain.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="border-t border-[#0b1120]/10 pt-8 space-y-4">
           <p className="text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
             The sections below unpack what this looks like in practice.
           </p>
