@@ -61,7 +61,7 @@ function KairosLabs() {
               Building partnerships for the future
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              If this resonates—whether you are in consecrated life, a university or research centre, a foundation, or a social ministry—we would be glad to discern together what a partnership could look like.
+              Whether you lead a diocese, parish, religious order, university, social ministry, foundation, impact fund, or cooperative—let's discern together what a partnership could look like.
             </p>
             <button
               onClick={() => scrollToSection('contact')}
