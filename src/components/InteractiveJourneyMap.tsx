@@ -1,27 +1,28 @@
-import { useState } from 'react';
-import { Ear, Map, Zap, ChevronDown, ChevronUp } from 'lucide-react';
+import { useRef, useEffect, useState } from 'react';
+import { Ear, Map, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 
 function InteractiveJourneyMap() {
-  const [expandedPath, setExpandedPath] = useState<number | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [currentMovement, setCurrentMovement] = useState(0);
 
-  const paths = [
+  const movements = [
     {
       number: 1,
       icon: Ear,
       title: 'Discern & Clarify',
-      subtitle: 'Deep listening',
-      color: 'bg-[#0b1120]',
-      borderColor: 'border-[#0b1120]',
-      description: 'Start from stories, not tools. Surface hopes, fears, and concrete pressures. Build shared language and CST-grounded priorities.',
-      practices: [
-        'Deep listening to people and mission',
-        'Surfacing hopes, fears, and constraints',
-        'Building shared language around CST values',
+      subtitle: 'Deep listening to mission',
+      practice: 'Deep listening to people and mission',
+      practiceDetail: 'We start from stories, not tools—the charism, history, and concrete pressures and aspirations of your community.',
+      questions: [
+        'Where are we actually at with AI?',
+        'What pressures do we face?',
+        'What is our mission calling us toward?',
+        'What do we refuse to sacrifice?',
       ],
-      offerings: [
-        'AI Discernment Call (60-90 min)',
-        'CST & AI Foundations Briefing (90-120 min)',
-        'Board-ready Discernment Dossier',
+      entryPoints: [
+        { label: 'Just exploring', offering: 'Free 30-min intro call' },
+        { label: 'Specific decision', offering: 'AI Discernment Call' },
+        { label: 'Board needs baseline', offering: 'CST & AI Briefing' },
       ],
       link: '#discern-clarify',
     },
@@ -29,14 +30,14 @@ function InteractiveJourneyMap() {
       number: 2,
       icon: Map,
       title: 'Design & Decide',
-      subtitle: 'Workflow mapping',
-      color: 'bg-[#0b1120]',
-      borderColor: 'border-[#0b1120]',
-      description: 'Move from concerns to concrete options. Map workflows, identify bottlenecks, and design CST-grounded guardrails for decision-making.',
-      practices: [
-        'Mapping workflows and bottlenecks',
-        'Applying CST principles to choices',
-        'Designing focused, high-leverage changes',
+      subtitle: 'Workflow mapping & CST guardrails',
+      practice: 'Mapping workflows and letting CST speak',
+      practiceDetail: 'We look beyond the chatbot window at real constraints and workflows, bringing CST principles alongside them to guide concrete choices.',
+      questions: [
+        'What workflows create the most pressure?',
+        'Where might AI create meaningful relief?',
+        'What CST principles should guide our choices?',
+        'What are the real constraints?',
       ],
       offerings: [
         'Discernment Sprint (2-3 weeks)',
@@ -48,16 +49,16 @@ function InteractiveJourneyMap() {
       number: 3,
       icon: Zap,
       title: 'Mission Impact Work',
-      subtitle: 'Build & pilot',
-      color: 'bg-[#0b1120]',
-      borderColor: 'border-[#0b1120]',
-      description: 'Put discernment into practice. Build carefully scoped pilots and workflows that test what\'s possible without over-engineering.',
-      practices: [
-        'Designing focused, high-impact changes',
-        'Testing with small pilots and prototypes',
-        'Measuring impact on mission and staff wellbeing',
+      subtitle: 'Building & piloting with teams',
+      practice: 'Designing focused, high-impact changes',
+      practiceDetail: 'We work with you to identify high-leverage changes and then build momentum by starting there—testing what\'s possible without over-engineering.',
+      questions: [
+        'What does success look like for this pilot?',
+        'How do we measure mission effectiveness AND staff wellbeing?',
+        'What CST guardrails need to be in place?',
+        'How do we learn quickly and adapt?',
       ],
-      offerings: [
+      domains: [
         'Stakeholder & relationship operations',
         'Reporting & narrative throughput',
         'Operational visibility',
@@ -67,132 +68,188 @@ function InteractiveJourneyMap() {
     },
   ];
 
-  const togglePath = (index: number) => {
-    setExpandedPath(expandedPath === index ? null : index);
+  const scrollToMovement = (index: number) => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const movementWidth = container.scrollWidth / movements.length;
+      container.scrollTo({
+        left: movementWidth * index,
+        behavior: 'smooth',
+      });
+    }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
+        const movementWidth = container.scrollWidth / movements.length;
+        const newIndex = Math.round(container.scrollLeft / movementWidth);
+        setCurrentMovement(newIndex);
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, [movements.length]);
+
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+    <section className="py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-8">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0b1120] mb-4">
-            The Journey: Three Movements
+            Three Movements of Discernment
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Most engagements start small and bounded. Click each path to explore what happens there.
+          <p className="text-base text-gray-700 max-w-2xl mx-auto mb-6">
+            Scroll horizontally to explore each movement. Most engagements start small and bounded.
           </p>
         </div>
 
-        <div className="relative">
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-[#f5c96c]/30" style={{ marginLeft: '12.5%', marginRight: '12.5%' }}></div>
+        <div className="flex justify-center items-center gap-2 mb-6">
+          {movements.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToMovement(index)}
+              className={`h-2 rounded-full transition-all ${
+                currentMovement === index ? 'w-8 bg-[#f5c96c]' : 'w-2 bg-gray-300'
+              }`}
+              aria-label={`Go to movement ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {paths.map((path, index) => {
-              const Icon = path.icon;
-              const isExpanded = expandedPath === index;
-
-              return (
-                <div key={path.number} className="relative">
-                  <button
-                    onClick={() => togglePath(index)}
-                    className={`w-full border-2 ${path.borderColor} rounded-lg p-6 bg-white hover:shadow-xl transition-all ${isExpanded ? 'shadow-xl scale-105' : 'hover:scale-102'}`}
-                  >
-                    <div className="flex flex-col items-center text-center space-y-4">
-                      <div className="relative">
-                        <div className={`w-16 h-16 rounded-full ${path.color} flex items-center justify-center`}>
-                          <Icon className="w-8 h-8 text-[#f5c96c]" />
-                        </div>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#f5c96c] flex items-center justify-center text-[#0b1120] font-bold text-sm">
-                          {path.number}
-                        </div>
+      <div
+        ref={scrollContainerRef}
+        className="flex overflow-x-scroll snap-x snap-mandatory scroll-smooth hide-scrollbar"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {movements.map((movement, index) => {
+          const Icon = movement.icon;
+          return (
+            <div
+              key={movement.number}
+              className="min-w-full snap-center px-6 md:px-12 py-8"
+            >
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-gradient-to-br from-[#f8f5f0] to-white border-2 border-[#f5c96c]/30 rounded-2xl p-8 md:p-12 shadow-xl">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-[#0b1120] flex items-center justify-center">
+                        <Icon className="w-8 h-8 text-[#f5c96c]" />
                       </div>
-
-                      <div>
-                        <h3 className="text-xl font-serif font-bold text-[#0b1120] mb-1">
-                          {path.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 font-medium">
-                          {path.subtitle}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center gap-2 text-[#f5c96c]">
-                        <span className="text-sm font-semibold">
-                          {isExpanded ? 'Show less' : 'Learn more'}
-                        </span>
-                        {isExpanded ? (
-                          <ChevronUp className="w-5 h-5" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5" />
-                        )}
+                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#f5c96c] flex items-center justify-center text-[#0b1120] font-bold">
+                        {movement.number}
                       </div>
                     </div>
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-
-          {expandedPath !== null && (
-            <div className="bg-[#f8f5f0] border-2 border-[#f5c96c]/40 rounded-lg p-8 mb-8 animate-fadeIn">
-              <div className="max-w-4xl mx-auto">
-                <h4 className="text-2xl font-serif font-bold text-[#0b1120] mb-4">
-                  Path {paths[expandedPath].number}: {paths[expandedPath].title}
-                </h4>
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  {paths[expandedPath].description}
-                </p>
-
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h5 className="text-lg font-semibold text-[#0b1120] mb-3">
-                      Core Practices
-                    </h5>
-                    <ul className="space-y-2">
-                      {paths[expandedPath].practices.map((practice, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-[#f5c96c] mt-1">•</span>
-                          <span className="text-gray-700">{practice}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#0b1120]">
+                        {movement.title}
+                      </h3>
+                      <p className="text-gray-600 font-medium">{movement.subtitle}</p>
+                    </div>
                   </div>
 
-                  <div>
-                    <h5 className="text-lg font-semibold text-[#0b1120] mb-3">
-                      Offerings
-                    </h5>
-                    <ul className="space-y-2">
-                      {paths[expandedPath].offerings.map((offering, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-[#f5c96c] mt-1">•</span>
-                          <span className="text-gray-700">{offering}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="mb-8">
+                    <div className="border-l-4 border-[#f5c96c] pl-4 mb-4">
+                      <h4 className="font-serif font-bold text-lg text-[#0b1120] mb-2">
+                        Core Practice
+                      </h4>
+                      <p className="text-base font-semibold text-gray-800 mb-2">{movement.practice}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {movement.practiceDetail}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="text-center">
-                  <a
-                    href={paths[expandedPath].link}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0b1120] text-white font-semibold rounded hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all"
-                  >
-                    Explore this path in detail
-                    <span className="text-lg">→</span>
-                  </a>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="font-serif font-bold text-lg text-[#0b1120] mb-4">
+                        Guiding Questions
+                      </h4>
+                      <ul className="space-y-2">
+                        {movement.questions.map((question, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                            <span className="text-[#f5c96c] font-bold mt-0.5">→</span>
+                            <span>{question}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-serif font-bold text-lg text-[#0b1120] mb-4">
+                        {movement.entryPoints ? 'Entry Points' : movement.offerings ? 'Offerings' : 'Example Domains'}
+                      </h4>
+                      {movement.entryPoints && (
+                        <div className="space-y-3">
+                          {movement.entryPoints.map((entry, idx) => (
+                            <div key={idx} className="text-sm">
+                              <p className="text-gray-700 font-medium">{entry.label}</p>
+                              <p className="text-[#0b1120] font-semibold">→ {entry.offering}</p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {movement.offerings && (
+                        <ul className="space-y-2">
+                          {movement.offerings.map((offering, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                              <span className="text-[#f5c96c] font-bold mt-0.5">•</span>
+                              <span>{offering}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {movement.domains && (
+                        <ul className="space-y-2">
+                          {movement.domains.map((domain, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                              <span className="text-[#f5c96c] font-bold mt-0.5">•</span>
+                              <span>{domain}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mt-8 text-center">
+                    <a
+                      href={movement.link}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#0b1120] text-white font-semibold rounded-lg hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all"
+                    >
+                      Explore in detail
+                      <span className="text-lg">→</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          )}
-        </div>
+          );
+        })}
+      </div>
 
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-600 max-w-3xl mx-auto">
-            Each engagement is tailored to your context. Many organizations start with Path 1 to build shared understanding, then move to Path 2 for focused design work, and finally to Path 3 for implementation.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-center gap-4">
+        <button
+          onClick={() => scrollToMovement(Math.max(0, currentMovement - 1))}
+          disabled={currentMovement === 0}
+          className="flex items-center gap-2 px-4 py-2 bg-[#0b1120] text-white rounded-lg hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-[#0b1120] disabled:hover:text-white"
+        >
+          <ChevronLeft className="w-5 h-5" />
+          Previous
+        </button>
+        <button
+          onClick={() => scrollToMovement(Math.min(movements.length - 1, currentMovement + 1))}
+          disabled={currentMovement === movements.length - 1}
+          className="flex items-center gap-2 px-4 py-2 bg-[#0b1120] text-white rounded-lg hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-[#0b1120] disabled:hover:text-white"
+        >
+          Next
+          <ChevronRight className="w-5 h-5" />
+        </button>
       </div>
     </section>
   );
