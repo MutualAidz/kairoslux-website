@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,7 @@ function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -33,30 +36,47 @@ function Navigation() {
         </button>
 
         <div className="hidden md:flex items-center space-x-8">
-          <button
-            onClick={() => scrollToSection('compass')}
-            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            How we work
-          </button>
-          <button
-            onClick={() => scrollToSection('discern-clarify')}
-            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
-          >
-            Discern
-          </button>
-          <button
-            onClick={() => scrollToSection('design-decide')}
-            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
-          >
-            Design
-          </button>
-          <button
-            onClick={() => scrollToSection('mission-impact')}
-            className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
-          >
-            Mission Impact
-          </button>
+            <button
+              onClick={() => scrollToSection('compass')}
+              className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors flex items-center gap-1"
+            >
+              How we work
+              <ChevronDown className="w-3 h-3" />
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2">
+                <button
+                  onClick={() => scrollToSection('discern-clarify')}
+                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                >
+                  <span className="text-xs text-[#f5c96c]/60">Path 1</span>
+                  <br />
+                  Discern & Clarify
+                </button>
+                <button
+                  onClick={() => scrollToSection('design-decide')}
+                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                >
+                  <span className="text-xs text-[#f5c96c]/60">Path 2</span>
+                  <br />
+                  Design & Decide
+                </button>
+                <button
+                  onClick={() => scrollToSection('mission-impact')}
+                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                >
+                  <span className="text-xs text-[#f5c96c]/60">Path 3</span>
+                  <br />
+                  Mission Impact Work
+                </button>
+              </div>
+            )}
+          </div>
           <button
             onClick={() => scrollToSection('kairos-labs')}
             className="text-sm text-gray-200 hover:text-[#f5c96c] transition-colors"
@@ -77,28 +97,32 @@ function Navigation() {
           </button>
         </div>
 
-        <div className="md:hidden flex flex-wrap gap-3 text-xs">
-          <button onClick={() => scrollToSection('compass')} className="text-gray-200 hover:text-[#f5c96c]">
-            How we work
-          </button>
-          <button onClick={() => scrollToSection('discern-clarify')} className="text-gray-200 hover:text-[#f5c96c]">
-            Discern
-          </button>
-          <button onClick={() => scrollToSection('design-decide')} className="text-gray-200 hover:text-[#f5c96c]">
-            Design
-          </button>
-          <button onClick={() => scrollToSection('mission-impact')} className="text-gray-200 hover:text-[#f5c96c]">
-            Impact
-          </button>
-          <button onClick={() => scrollToSection('kairos-labs')} className="text-gray-200 hover:text-[#f5c96c]">
-            Labs
-          </button>
-          <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-[#f5c96c]">
-            About
-          </button>
-          <button onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-[#f5c96c]">
-            Contact
-          </button>
+        <div className="md:hidden">
+          <div className="flex flex-wrap gap-3 text-xs">
+            <button onClick={() => scrollToSection('compass')} className="text-gray-200 hover:text-[#f5c96c]">
+              How we work
+            </button>
+            <button onClick={() => scrollToSection('kairos-labs')} className="text-gray-200 hover:text-[#f5c96c]">
+              Labs
+            </button>
+            <button onClick={() => scrollToSection('about')} className="text-gray-200 hover:text-[#f5c96c]">
+              About
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-200 hover:text-[#f5c96c]">
+              Contact
+            </button>
+          </div>
+          <div className="flex flex-wrap gap-2 text-xs mt-2 pl-2">
+            <button onClick={() => scrollToSection('discern-clarify')} className="text-gray-400 hover:text-[#f5c96c]">
+              → Discern
+            </button>
+            <button onClick={() => scrollToSection('design-decide')} className="text-gray-400 hover:text-[#f5c96c]">
+              → Design
+            </button>
+            <button onClick={() => scrollToSection('mission-impact')} className="text-gray-400 hover:text-[#f5c96c]">
+              → Impact
+            </button>
+          </div>
         </div>
       </div>
     </nav>
