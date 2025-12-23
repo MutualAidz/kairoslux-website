@@ -137,7 +137,7 @@ function Compass() {
           </div>
 
           <p className="text-sm text-gray-500 text-center mt-6 max-w-3xl mx-auto">
-            All offerings are delivered as bounded engagements and pilots while we build repeatable patterns and tools.
+            Most engagements start as a bounded call, sprint, or pilot—so we can learn quickly, protect staff capacity, and avoid over-promising.
           </p>
         </div>
       </div>
