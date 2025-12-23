@@ -7,13 +7,14 @@ function Contact() {
     email: '',
     organization: '',
     organizationType: '',
+    interest: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = 'Kairos Lux Works — Website inquiry';
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization/community: ${formData.organization}${formData.organizationType ? `\nOrganization type: ${formData.organizationType}` : ''}\nMessage: ${formData.message}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization/community: ${formData.organization}${formData.organizationType ? `\nOrganization type: ${formData.organizationType}` : ''}\nReaching out about: ${formData.interest}\nMessage: ${formData.message}`;
     const mailtoLink = `mailto:hello@kairoslux.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
@@ -173,6 +174,29 @@ function Contact() {
                     <option value="Other / not sure yet">Other / not sure yet</option>
                   </optgroup>
                 </select>
+              </div>
+
+              <div>
+                <label htmlFor="interest" className="block text-sm font-semibold mb-2 text-gray-700">
+                  What are you reaching out about?
+                </label>
+                <select
+                  id="interest"
+                  name="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#f5c96c] text-gray-900"
+                >
+                  <option value="">Select one…</option>
+                  <option value="Consulting / delivery (Kairos Lux Works)">Consulting / delivery (Kairos Lux Works)</option>
+                  <option value="Partnership / sponsorship (Kairos Labs, in formation)">Partnership / sponsorship (Kairos Labs, in formation)</option>
+                  <option value="Both">Both</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+                <p className="text-xs text-gray-500 mt-2">
+                  This helps route your note to the right place.
+                </p>
               </div>
 
               <div>
