@@ -124,7 +124,7 @@ function Contact() {
 
               <div>
                 <label htmlFor="organizationType" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Organization type (optional)
+                  Who are you? (optional)
                 </label>
                 <select
                   id="organizationType"
@@ -134,13 +134,44 @@ function Contact() {
                   className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#f5c96c] text-gray-900"
                 >
                   <option value="">Select if applicable</option>
-                  <option value="Religious order or congregation">Religious order or congregation</option>
-                  <option value="University or research center">University or research center</option>
-                  <option value="Foundation or philanthropy">Foundation or philanthropy</option>
-                  <option value="Impact finance or professional network">Impact finance or professional network</option>
-                  <option value="NGO or social ministry">NGO or social ministry</option>
-                  <option value="Diocese or parish">Diocese or parish</option>
-                  <option value="Other">Other</option>
+
+                  <optgroup label="Church & ministries">
+                    <option value="Diocese/chancery/bishops conference">Diocese/chancery/bishops conference</option>
+                    <option value="Parish">Parish</option>
+                    <option value="Religious order">Religious order</option>
+                    <option value="Catholic nonprofit/ministry">Catholic nonprofit/ministry</option>
+                    <option value="Catholic school (K-12)">Catholic school (K-12)</option>
+                    <option value="Catholic university/research center">Catholic university/research center</option>
+                    <option value="Catholic healthcare/social services">Catholic healthcare/social services</option>
+                  </optgroup>
+
+                  <optgroup label="Finance & philanthropy">
+                    <option value="Foundation/grantmaker">Foundation/grantmaker</option>
+                    <option value="Impact investor/family office">Impact investor/family office</option>
+                    <option value="Development/advancement team">Development/advancement team</option>
+                    <option value="CSR/shareholder advocacy">CSR/shareholder advocacy</option>
+                  </optgroup>
+
+                  <optgroup label="Research & collaboration">
+                    <option value="University faculty/lab">University faculty/lab</option>
+                    <option value="Student/capstone team">Student/capstone team</option>
+                    <option value="Technology partner">Technology partner</option>
+                  </optgroup>
+
+                  <optgroup label="Cooperative & civic">
+                    <option value="Credit union/cooperative finance">Credit union/cooperative finance</option>
+                    <option value="Cooperative development org">Cooperative development org</option>
+                    <option value="Public-interest/commons AI org">Public-interest/commons AI org</option>
+                  </optgroup>
+
+                  <optgroup label="Media & convening">
+                    <option value="Media/journalism">Media/journalism</option>
+                    <option value="Conference/convening organizer">Conference/convening organizer</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option value="Other / not sure yet">Other / not sure yet</option>
+                  </optgroup>
                 </select>
               </div>
 
