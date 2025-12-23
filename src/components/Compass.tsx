@@ -31,7 +31,7 @@ function Compass() {
   return (
     <section id="compass" className="py-20 px-6 bg-[#f8f5f0]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">
               How we work
@@ -45,40 +45,31 @@ function Compass() {
               Kairos Compass is our evolving framework for CST-grounded discernment about AI and work. It's how we bring intelligence and spirit into the same conversation, and how we move from anxiety to clear next steps.
             </p>
 
-            <div className="bg-[#f5c96c]/10 border-l-4 border-[#f5c96c] p-6 rounded-r-lg my-6">
-              <h3 className="text-lg font-semibold text-[#0b1120] mb-2">
-                What we mean by redesigning work
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                AI adoption isn't a plug-in—it changes decisions, workflows, and architecture. We help institutions redesign work with CST as a real constraint: clearer governance, humane workflows, and tools that serve people rather than capture them.
-              </p>
-            </div>
-
-            <div className="space-y-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               {principles.map((principle) => {
                 const Icon = principle.icon;
                 return (
-                  <div key={principle.number} className="flex gap-4 group">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-[#0b1120] flex items-center justify-center group-hover:bg-[#f5c96c] transition-colors">
-                        <Icon className="w-6 h-6 text-[#f5c96c] group-hover:text-[#0b1120]" />
+                  <div key={principle.number} className="flex flex-col gap-3 group">
+                    <div className="flex items-center gap-3">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 rounded-full bg-[#0b1120] flex items-center justify-center group-hover:bg-[#f5c96c] transition-colors">
+                          <Icon className="w-5 h-5 text-[#f5c96c] group-hover:text-[#0b1120]" />
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#0b1120] mb-1">
+                      <h3 className="font-semibold text-[#0b1120] text-sm">
                         {principle.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {principle.description}
-                      </p>
                     </div>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {principle.description}
+                    </p>
                   </div>
                 );
               })}
             </div>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-start">
             <img
               src="/images/compass-vision.png"
               alt="Radiant compass with sacramental symbols in a beam of light"

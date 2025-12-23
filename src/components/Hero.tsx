@@ -31,11 +31,11 @@ function Hero() {
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              We help you see options that are hard to notice from inside that pressure: using AI to relieve reporting and coordination burdens, free more time for people and presence, and support more dignified, creative work for your teams and the people you serve.
+              We help you see options that are hard to notice from inside that pressure: using AI to relieve reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work for your teams and the people you serve.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              We help you resist the dominant Silicon Valley narrative of speed, scale, and disruption, and instead use AI as a tool for institutional flourishing and for the economy Christ calls us to build.
+              We help you resist the dominant Silicon Valley narrative of speed, scale, and disruption, and instead use AI as a tool for institutions meant to move deliberately to heal and serve.
             </p>
           </div>
 

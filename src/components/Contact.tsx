@@ -52,7 +52,7 @@ function Contact() {
                     href="mailto:hello@kairoslux.ai"
                     className="text-lg font-semibold hover:text-[#f5d88a] transition-colors"
                   >
-                    hello@kairoslux.ai
+                    hello@kairosl<span className="border-b-2 border-[#f5c96c]">ux.ai</span>
                   </a>
                   <p className="text-xs text-gray-600 mt-2">Messages reach Felix Navarrete and the Kairos Lux Works team.</p>
                 </div>

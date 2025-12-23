@@ -14,8 +14,8 @@ function TwoWaysToEngage() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#0b1120]">
+          <div className="border-2 border-[#f5c96c]/40 rounded-lg p-6 bg-gradient-to-br from-white to-[#f8f5f0] hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/20 transition-all space-y-4">
+            <h3 className="text-xl font-serif font-bold text-[#0b1120]">
               Kairos Lux Works (LLC)
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -24,14 +24,14 @@ function TwoWaysToEngage() {
             </p>
             <button
               onClick={() => scrollToSection('discern-clarify')}
-              className="px-6 py-2 bg-[#0b1120] text-white font-semibold rounded hover:bg-[#1a2845] transition-all"
+              className="px-6 py-2 bg-[#0b1120] text-white font-serif font-semibold rounded hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all"
             >
               Explore Kairos Lux Works
             </button>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#0b1120]">
+          <div className="border-2 border-[#f5c96c]/40 rounded-lg p-6 bg-gradient-to-br from-white to-[#f8f5f0] hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/20 transition-all space-y-4">
+            <h3 className="text-xl font-serif font-bold text-[#0b1120]">
               Kairos Labs (in formation)
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -39,7 +39,7 @@ function TwoWaysToEngage() {
             </p>
             <button
               onClick={() => scrollToSection('kairos-labs')}
-              className="px-6 py-2 bg-[#0b1120] text-white font-semibold rounded hover:bg-[#1a2845] transition-all"
+              className="px-6 py-2 bg-[#0b1120] text-white font-serif font-semibold rounded hover:bg-[#f5c96c] hover:text-[#0b1120] transition-all"
             >
               Explore Kairos Labs
             </button>

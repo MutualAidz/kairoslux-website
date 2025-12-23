@@ -32,7 +32,7 @@ function Navigation() {
           onClick={() => scrollToSection('hero')}
           className="text-xl font-serif font-bold text-white tracking-wide hover:text-[#f5c96c] transition-colors"
         >
-          Kairos Lux Works
+          K<span className="border-b-2 border-[#f5c96c]">ai</span>ros Lux Works
         </button>
 
         <div className="hidden md:flex items-center space-x-8">

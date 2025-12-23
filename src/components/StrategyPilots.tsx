@@ -24,17 +24,17 @@ function StrategyPilots() {
   ];
 
   return (
-    <section id="design-decide" className="py-20 px-6 bg-[#f8f5f0]">
+    <section id="design-decide" className="py-20 px-6 bg-[#0b1930]">
       <div className="max-w-7xl mx-auto">
-        <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold mb-4">
+        <p className="text-sm uppercase tracking-wider text-white/70 font-semibold mb-4">
           Path 2
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0b1120] mb-6">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
           Design & Decide
         </h2>
 
-        <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-12">
+        <p className="text-lg text-gray-200 leading-relaxed max-w-4xl mb-12">
           When there is enough shared understanding, we move into structured design work that turns concerns and ideas into concrete options.
         </p>
 
@@ -44,7 +44,7 @@ function StrategyPilots() {
             return (
               <div
                 key={service.title}
-                className="bg-white border border-[#f5c96c]/30 rounded-lg p-8 hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all hover:border-[#f5c96c]"
+                className="border border-[#f5c96c]/30 rounded-lg p-8 hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all hover:border-[#f5c96c] bg-gradient-to-br from-white to-[#f8f5f0]"
               >
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
