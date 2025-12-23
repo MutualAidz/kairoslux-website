@@ -46,10 +46,10 @@ function FormationLabs() {
         <div className="max-w-4xl">
           <div className="rounded-lg border border-[#f5c96c]/40 bg-white/5 p-6">
             <h3 className="text-xl font-serif font-bold text-white mb-3">
-              Optional add-on: Board Notes & Discernment Dossiers
+              Board-ready Discernment Dossier
             </h3>
             <p className="text-gray-200 leading-relaxed">
-              Short, tailored internal notes for boards and leadership teams. Building on calls or seminars, we synthesise your context, highlight CST tensions and opportunities, and outline a few options in plain language. These are working documents for prayerful, strategic discernment—not glossy public white papers.
+              A concise memo for leadership or boards: context, options, risks, and a recommended next step.
             </p>
           </div>
         </div>
