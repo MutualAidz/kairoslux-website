@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import TwoWaysToEngage from './components/TwoWaysToEngage';
 import LeoQuotes from './components/LeoQuotes';
 import Compass from './components/Compass';
+import Movements from './components/Movements';
 import KairosLabs from './components/KairosLabs';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -15,6 +16,7 @@ function App() {
       <TwoWaysToEngage />
       <LeoQuotes />
       <Compass />
+      <Movements />
       <KairosLabs />
       <About />
       <Contact />
