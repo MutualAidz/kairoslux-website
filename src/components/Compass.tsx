@@ -126,6 +126,10 @@ function Compass() {
               </span>
             </a>
           </div>
+
+          <p className="text-sm text-gray-500 text-center mt-6 max-w-3xl mx-auto">
+            All offerings are delivered as bounded engagements and pilots while we build repeatable patterns and tools.
+          </p>
         </div>
       </div>
     </section>

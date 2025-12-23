@@ -4,23 +4,23 @@ function MissionImpact() {
   const impactAreas = [
     {
       icon: Target,
-      title: 'Relationship & capital intelligence',
-      description: 'Helping Catholic finance and impact-oriented organisations focus on the right relationships at the right time: using their own data to surface opportunities, remember commitments, and align capital with mission.',
+      title: 'Stakeholder & relationship operations',
+      description: 'Donors, alumni, partners, volunteers, congregations—helping organizations focus on the right relationships at the right time, surface opportunities, and align engagement with mission.',
     },
     {
       icon: BarChart3,
-      title: 'Reporting & donor / stakeholder intelligence',
-      description: 'Reducing the burden of complex reporting and fundraising work—especially under funding cuts—so staff can spend more time on accompaniment and programme quality. This can include AI-assisted reporting drafts, consistency checking between budgets and narratives, or better use of existing CRM and ERP data.',
+      title: 'Reporting & narrative throughput',
+      description: 'Boards, grants, impact updates, leadership comms—reducing the burden of complex reporting work so staff can spend more time on program quality and accompaniment.',
     },
     {
       icon: TrendingUp,
-      title: 'Operational and financial analytics',
-      description: 'Working with complex spreadsheets, models, and other operational data so leaders can see scenarios more clearly and make decisions more quickly, while keeping CST concerns in view.',
+      title: 'Operational visibility',
+      description: 'Budgeting, forecasting, program ops, staffing capacity—working with complex data and models so leaders can see scenarios more clearly and make decisions more quickly.',
     },
     {
       icon: BookOpen,
-      title: 'Tradition-aware tools (early / in development)',
-      description: 'Exploring small-scope tools that bring CST or other parts of the tradition into view at the moment of decision—always as an aid to human discernment, never a substitute for it.',
+      title: 'Tradition-aware decision support',
+      description: 'Principles, policies, governance, Catholic identity—exploring tools that bring CST and tradition into view at the moment of decision, always as an aid to human discernment, never a substitute for it.',
     },
   ];
 
