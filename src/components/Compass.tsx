@@ -1,4 +1,4 @@
-import { Search, Map, Book, Zap } from 'lucide-react';
+import { Search, Map, Book, Zap, Target, BarChart3, TrendingUp, BookOpen, Database, Archive } from 'lucide-react';
 
 function Compass() {
   const principles = [
@@ -25,6 +25,39 @@ function Compass() {
       icon: Zap,
       title: 'Design high‑leverage changes',
       description: 'We identify a small set of focused moves that reduce burden and build momentum without over‑engineering.',
+    },
+  ];
+
+  const missionDomains = [
+    {
+      icon: Target,
+      title: 'Stakeholder & relationship operations',
+      description: 'Donors, alumni, partners, volunteers, congregations—helping organisations focus on the right relationships at the right time and align engagement with mission.',
+    },
+    {
+      icon: BarChart3,
+      title: 'Reporting & narrative throughput',
+      description: 'Boards, grants, impact updates, leadership comms—reducing the burden of complex reporting so staff can spend more time on program quality and accompaniment.',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Operational visibility',
+      description: 'Budgeting, forecasting, program ops, staffing capacity—working with complex data and models so leaders can see scenarios clearly and decide deliberately.',
+    },
+    {
+      icon: BookOpen,
+      title: 'Tradition‑aware decision support',
+      description: 'Principles, policies, governance, Catholic identity—bringing CST and tradition into view at the moment of decision as an aid to human discernment.',
+    },
+    {
+      icon: Database,
+      title: 'Data strategy & readiness',
+      description: 'Clarifying what data you have, what you need, and what is realistic—so AI decisions are responsible, secure, and grounded in actual capacity.',
+    },
+    {
+      icon: Archive,
+      title: 'Institutional memory',
+      description: 'Documents, policies, precedents, and shared knowledge—so decisions are made with continuity, context, and the wisdom already present in the institution.',
     },
   ];
 
@@ -79,6 +112,49 @@ function Compass() {
               alt="Radiant compass with sacramental symbols in a beam of light"
               className="compass-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
             />
+          </div>
+        </div>
+
+        {/* Mission Domains Section */}
+        <div className="mt-16 space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold">
+              WHERE THIS SHOWS UP
+            </p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0b1120]">
+              Mission work domains
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Common workflows where AI can reduce burden and strengthen mission—when guided by CST and good governance.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {missionDomains.map((domain) => {
+              const Icon = domain.icon;
+              return (
+                <div
+                  key={domain.title}
+                  className="border border-[#0b1120]/10 rounded-lg p-6 hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all hover:border-[#f5c96c] bg-white"
+                >
+                  <div className="flex flex-col gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-[#0b1120] flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-[#f5c96c]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-serif font-bold text-[#0b1120] mb-2">
+                        {domain.title}
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">
+                        {domain.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
