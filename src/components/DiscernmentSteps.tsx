@@ -308,6 +308,7 @@ export default function DiscernmentSteps() {
             <p className="text-xs font-semibold tracking-[0.2em] text-white/70">
               {s.pathLabel} — {s.legacyTitle}
             </p>
+            <span className="sr-only">{s.pathLabel} — {s.legacyTitle}</span>
             <h3 className="mt-2 text-2xl font-semibold text-white">
               {s.stepLabel}: {s.stepTitle}
             </h3>
@@ -449,9 +450,7 @@ export default function DiscernmentSteps() {
                     {s.stepLabel}
                   </p>
                   <p className="mt-2 text-xl font-semibold text-white">{s.stepTitle}</p>
-                  <p className="mt-2 text-sm text-white/75">
-                    {s.pathLabel} — {s.legacyTitle}
-                  </p>
+                  <span className="sr-only">{s.pathLabel} — {s.legacyTitle}</span>
                 </button>
               );
             })}
