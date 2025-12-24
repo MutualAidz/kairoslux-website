@@ -56,7 +56,7 @@ export default function DiscernmentSteps() {
         stepLabel: "Step 1",
         stepTitle: "Discern by Listening",
         oneLiner:
-          "We build shared understanding in the light of mission—naming pressures, hopes, constraints, and what you refuse to sacrifice.",
+          "For leadership teams who need to name what is happening, what they hope for, and what they refuse to sacrifice.",
         practiceBadges: ["Listen for mission"],
         questions: [
           "What is our mission asking of us right now?",
