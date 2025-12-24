@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { Search, Map, Book, Zap, Target, BarChart3, TrendingUp, BookOpen, Database, Archive } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 function Compass() {
-  const [compassImgError, setCompassImgError] = useState(false);
   const principles = [
     {
       number: '01',
@@ -113,19 +112,12 @@ function Compass() {
           </div>
 
           <div className="flex justify-center items-start">
-            {!compassImgError ? (
-              <img
-                src="/images/compass-cross.png"
-                alt="Radiant compass with sacramental symbols in a beam of light"
-                className="compass-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
-                onError={() => setCompassImgError(true)}
-              />
-            ) : (
-              <div
-                aria-hidden
-                className="w-full max-w-lg aspect-[4/3] rounded-lg border border-[#f5c96c]/20 bg-gradient-to-br from-[#0b1930]/5 to-[#f8f5f0]"
-              />
-            )}
+            <SafeImage
+              src="/images/compass-cross.png"
+              alt="Radiant compass with sacramental symbols in a beam of light"
+              className="compass-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
+              placeholderClassName="w-full max-w-lg rounded-lg border border-[#f5c96c]/20 bg-gradient-to-br from-[#0b1930]/5 to-[#f8f5f0]"
+            />
           </div>
         </div>
 

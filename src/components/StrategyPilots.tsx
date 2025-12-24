@@ -147,43 +147,57 @@ export function StrategyPilots() {
               </div>
 
               <p className="max-w-xl text-lg text-slate-200">
-                For leadership teams who need to name what is happening, what they
-                hope for, and what they refuse to sacrifice.
+                For leadership teams who need to name what is happening, what they hope for,
+                and what they refuse to sacrifice.
               </p>
             </div>
 
             <p className="mt-6 max-w-3xl text-slate-200">
-              Everyone arrives at AI from a different place. We start by listening
-              for mission, pressures, and charisms—then recommend the smallest next
-              step that brings clarity without hype or vendor capture.
+              Everyone arrives at AI from a different place. We start by listening for
+              mission, pressures, and constraints—then recommend the smallest next step
+              that brings clarity without hype or vendor capture.
             </p>
 
-            <div className="mt-10">
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-                Common entry points
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              <div className="space-y-4">
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+                  Guiding questions
+                </div>
+                <ul className="space-y-3 text-sm text-slate-100">
+                  <li>• What is our mission asking of us right now?</li>
+                  <li>• What pressures, hopes, and fears are shaping our choices?</li>
+                  <li>• What do we refuse to sacrifice as we adapt?</li>
+                  <li>• What would a faithful next step look like—for people and those we serve?</li>
+                </ul>
               </div>
-              <div className="mt-4 grid gap-6 md:grid-cols-2">
-                <Card
-                  title="Intro call (free)"
-                  description="A short first conversation to understand your context and name what would make the next step clearer. If there's a fit, we'll recommend a bounded next engagement."
-                  footnote="No prep required."
-                  accent
-                />
-                <Card
-                  title="AI discernment session (60–90 min)"
-                  description="A focused facilitated conversation to surface pressures, constraints, and the mission logic underneath them—so leaders can move from anxiety to clear next steps."
-                  footnote="Leads to a Kairos Note."
-                />
-                <Card
-                  title="CST & AI foundations briefing (for boards or teams)"
-                  description="A facilitated session that builds shared language: real risks, real possibilities, and CST lenses for thinking without hype or blanket rejection."
-                  footnote="Useful before major decisions."
-                />
-                <Card
-                  title="CST–AI lab session (by request)"
-                  description="For organizations that want deeper theological grounding and practical imagination together—connecting CST, real workflows, and responsible AI use."
-                  footnote="Format varies by context."
-                />
+
+              <div className="space-y-4">
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+                  Common entry points
+                </div>
+                <div className="grid gap-4">
+                  <Card
+                    title="Intro call (free)"
+                    description="A short first conversation to understand your context and name what would make the next step clearer."
+                    footnote="No prep required."
+                    accent
+                  />
+                  <Card
+                    title="AI discernment session (60–90 min)"
+                    description="A focused conversation with key decision-makers to surface pressures, hopes, constraints, and the mission logic underneath them."
+                    footnote="Leads to a Kairos Note."
+                  />
+                </div>
+                <div className="grid gap-3 md:grid-cols-2">
+                  <Card
+                    title="CST & AI foundations briefing (for boards or teams)"
+                    description="Build shared language on risks, possibilities, and CST lenses—without hype or blanket rejection."
+                  />
+                  <Card
+                    title="CST–AI lab session (by request)"
+                    description="Deeper theological grounding and practical imagination—connecting CST, real workflows, and responsible AI use."
+                  />
+                </div>
               </div>
             </div>
 
@@ -194,15 +208,15 @@ export function StrategyPilots() {
               <div className="mt-4 grid gap-6 md:grid-cols-2">
                 <Card
                   title="Kairos Note"
-                  description="A concise written summary: what we heard, how it looks through CST, and a recommended next step."
+                  description="Concise written summary of your priorities, key pressures, and recommended next steps."
                 />
                 <Card
                   title="Board-ready discernment dossier"
-                  description="A board-ready memo that translates discernment into governance: context, credible options, key risks/tradeoffs, and a recommended path forward."
+                  description="Board-ready memo with decision framing, risks/benefits, and a recommended path."
                 >
                   <ul className="mt-3 list-disc space-y-2 pl-5">
-                    <li>Decision framing and guardrails grounded in CST</li>
-                    <li>What would need to be true for each option</li>
+                    <li>Decision framing and guardrails</li>
+                    <li>“What would need to be true” assumptions</li>
                     <li>A near-term "start here" recommendation</li>
                   </ul>
                 </Card>

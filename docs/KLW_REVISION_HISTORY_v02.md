@@ -38,6 +38,17 @@ Described Kairos Lux Works as a “small consultancy.”
 
 Included a product card for “Talks, panels, and retreats.”
 
+---
+
+Latest notable change
+
+Version ID: Codex_Workflow_Doc_Addition
+Date: 2024-12-23
+Source: Codex
+Summary: Added PROJECT_LLM_WORKFLOW.md and linked it from AI_WORKFLOW_SOP.md; clarified project-specific LLM operating rules and documentation alignment expectations.
+Spec compliance notes: Supports NN rules on verification and SSOT alignment.
+Decision: Adopted.
+
 Mission pilots language used as a section label.
 
 Feedback from Felix (paraphrased):
