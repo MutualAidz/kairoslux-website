@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Search, Map, Book, Zap, Target, BarChart3, TrendingUp, BookOpen, Database, Archive } from 'lucide-react';
 
 function Compass() {
+  const [compassImgError, setCompassImgError] = useState(false);
   const principles = [
     {
       number: '01',
@@ -75,7 +77,11 @@ function Compass() {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Kairos Compass is our evolving framework for CST-grounded discernment about AI and work—so mission stays primary as technology changes around you. It helps leadership teams move from anxiety to clear next steps without hype, blanket rejection, or vendor capture.
+              Kairos Compass is our evolving, CST-grounded orientation for discerning how AI changes work.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We start with mission: institutions meant to move deliberately to heal and serve—so technology supports people, presence, and the common good rather than capturing them.
             </p>
 
             <p className="text-xs uppercase tracking-wider text-[#0b1120]/60 font-semibold pt-6">
@@ -107,12 +113,29 @@ function Compass() {
           </div>
 
           <div className="flex justify-center items-start">
-            <img
-              src="/images/compass-vision.png"
-              alt="Radiant compass with sacramental symbols in a beam of light"
-              className="compass-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
-            />
+            {!compassImgError ? (
+              <img
+                src="/images/compass-cross.png"
+                alt="Radiant compass with sacramental symbols in a beam of light"
+                className="compass-image w-full max-w-lg rounded-lg shadow-xl border border-[#f5c96c]/30"
+                onError={() => setCompassImgError(true)}
+              />
+            ) : (
+              <div
+                aria-hidden
+                className="w-full max-w-lg aspect-[4/3] rounded-lg border border-[#f5c96c]/20 bg-gradient-to-br from-[#0b1930]/5 to-[#f8f5f0]"
+              />
+            )}
           </div>
+        </div>
+
+        <div className="mt-12 max-w-3xl mx-auto space-y-3 border-l-4 border-[#f5c96c] pl-5 text-sm text-gray-700 leading-relaxed">
+          <p>
+            We favor privacy-first, sovereign patterns where your data and institutional memory remain under your governance, not a vendor’s.
+          </p>
+          <p>
+            We use these practices to redesign mission work in common pressure points like the domains below.
+          </p>
         </div>
 
         {/* Mission Domains Section */}
@@ -125,7 +148,7 @@ function Compass() {
               Mission work domains
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Common workflows where AI can help to reduce reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work for your teams and the people you serve—so institutions can move deliberately to heal and serve.
+              Common workflows where AI can help to relieve reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work—so institutions can move deliberately to heal and serve.
             </p>
           </div>
 
@@ -156,60 +179,6 @@ function Compass() {
               );
             })}
           </div>
-        </div>
-
-        <div className="mt-12 border-t border-[#0b1120]/10 pt-8 space-y-4">
-          <p className="text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            This work unfolds through three movements of discernment—each one deepening shared understanding and building toward faithful action.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <a
-              href="#discern-clarify"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Movement 1</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Discern & Clarify</p>
-                <p className="text-base text-gray-600">Shared language and grounded priorities.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-
-            <a
-              href="#design-decide"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Movement 2</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Design & Decide</p>
-                <p className="text-base text-gray-600">Focused options, CST guardrails, and clear choices.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-
-            <a
-              href="#mission-impact"
-              className="group flex items-center justify-between border border-[#0b1120]/10 rounded-lg px-6 py-5 bg-white hover:border-[#f5c96c] hover:shadow-lg hover:shadow-[#f5c96c]/10 transition-all"
-            >
-              <div>
-                <p className="text-sm uppercase tracking-wider text-[#0b1120]/60 font-semibold">Movement 3</p>
-                <p className="text-xl font-semibold text-[#0b1120]">Mission Impact Work</p>
-                <p className="text-base text-gray-600">Build and pilot the plan with your teams.</p>
-              </div>
-              <span className="text-[#f5c96c] font-semibold text-2xl group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-          </div>
-
-          <p className="text-sm text-gray-500 text-center mt-6 max-w-3xl mx-auto">
-            All offerings start as bounded engagements and pilots—so we can move carefully, learn fast, and build repeatable patterns without over‑promising.
-          </p>
         </div>
       </div>
     </section>
