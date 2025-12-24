@@ -110,7 +110,7 @@ export default function DiscernmentSteps() {
         stepLabel: "Step 2",
         stepTitle: "Discern by Designing",
         oneLiner:
-          "We turn shared values into concrete options, guardrails, and a first pilot plan—grounded in real workflows and governance.",
+          "For leadership teams who need to turn mission priorities into options, guardrails, and a pilot plan.",
         practiceBadges: ["Map the work", "Let CST guide choices"],
         questions: [
           "Which workflow or decision is the right starting point—and why?",
@@ -123,13 +123,12 @@ export default function DiscernmentSteps() {
             title: "Discernment Sprint",
             meta: "2–3 weeks",
             body:
-              "Interviews + light workflow/data landscape review, then working sessions to propose 1–2 high‑leverage workflows and options with CST‑grounded guardrails.",
+              "A light-touch engagement that maps a workflow, identifies leverage points, defines CST-aligned guardrails, and outlines 2–3 credible options.",
           },
           {
-            title: "Deep Discernment Review",
-            meta: "4–6 weeks",
+            title: "Deep Discernment Review (4–6 weeks)",
             body:
-              "For provinces, universities, networks, or multi‑stakeholder systems: map mission, risk, and opportunity across domains and deliver a credible roadmap of where to start.",
+              "A deeper engagement that includes interviews, artifact review, a data readiness assessment, and governance guardrails—resulting in a board-ready memo and pilot plan.",
           },
           {
             title: "Decision design workshops (by request)",
@@ -139,14 +138,24 @@ export default function DiscernmentSteps() {
         ],
         outputs: [
           {
-            title: "Pilot‑ready options",
+            title: "Pilot-ready options (decision memo)",
             body:
-              "1–2 credible starting points (workflows/decisions) with rationale, risks, and CST‑grounded guardrails.",
+              "A clear set of options with tradeoffs, risks, and benefits—plus a recommended path.",
+            bullets: [
+              "Decision framing and CST guardrails",
+              "Credible options with tradeoffs",
+              "Recommendation for a first pilot",
+            ],
           },
           {
             title: "First pilot plan",
             body:
-              "A near‑term plan: scope, success criteria, governance questions, and what to learn before expanding.",
+              "Scope, success measures, data/security requirements, and a governance checklist—so you can move carefully.",
+            bullets: [
+              "Pilot scope + success measures",
+              "Data/security requirements",
+              "Governance checklist",
+            ],
           },
         ],
       },
