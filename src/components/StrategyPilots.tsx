@@ -13,15 +13,31 @@
  * - If your Navigation dropdown links to those hashes, they will still work.
  */
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 type Step = {
   id: "discern-clarify" | "design-decide" | "mission-impact";
-  stepLabel: string; // "Step 1"
-  title: string; // "Discern by Listening"
-  tagline: string; // one-line
-  content: ReactNode;
+  stepLabel: string;
+  title: string;
+  tagline: string;
+  summary: string;
+  body?: string;
+  questions: string[];
+  modules: Array<{
+    title: string;
+    description: string;
+    meta?: string;
+    footnote?: string;
+    bullets?: string[];
+    accent?: boolean;
+  }>;
+  outputs: Array<{
+    title: string;
+    description: string;
+    bullets?: string[];
+  }>;
+  extra?: ReactNode;
 };
 
 function Card(props: {
@@ -102,6 +118,10 @@ function StepPanel(props: {
   isActive: boolean;
 }) {
   const { step, showAll, isActive } = props;
+  const [modulesOpen, setModulesOpen] = useState(false);
+  const [outputsOpen, setOutputsOpen] = useState(false);
+  const modulesId = useId();
+  const outputsId = useId();
 
   return (
     <section
@@ -118,7 +138,107 @@ function StepPanel(props: {
           showAll && !isActive ? "opacity-90" : "opacity-100",
         ].join(" ")}
       >
-        {step.content}
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
+              {step.stepLabel}
+            </div>
+            <h3 className="mt-2 font-serif text-4xl text-white md:text-5xl">
+              {step.title}
+            </h3>
+          </div>
+
+          <p className="max-w-xl text-lg text-slate-200">{step.tagline}</p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-slate-200">{step.summary}</p>
+
+        {step.body ? (
+          <p className="mt-4 max-w-3xl text-slate-200">{step.body}</p>
+        ) : null}
+
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <div className="space-y-4">
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+              Guiding questions
+            </div>
+            <ul className="space-y-3 text-sm text-slate-100">
+              {step.questions.map((q) => (
+                <li key={q}>• {q}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <button
+              type="button"
+              onClick={() => setModulesOpen((v) => !v)}
+              aria-expanded={modulesOpen}
+              aria-controls={`${modulesId}-panel`}
+              className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-left text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Common modules
+            </button>
+            {modulesOpen ? (
+              <div
+                id={`${modulesId}-panel`}
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-4"
+              >
+                <div className="grid gap-4 md:grid-cols-2">
+                  {step.modules.map((m) => (
+                    <Card
+                      key={m.title}
+                      title={m.title}
+                      description={m.description}
+                      footnote={m.footnote}
+                      accent={m.accent}
+                    >
+                      {m.bullets ? (
+                        <ul className="mt-3 list-disc space-y-2 pl-5">
+                          {m.bullets.map((b) => (
+                            <li key={b}>{b}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            <button
+              type="button"
+              onClick={() => setOutputsOpen((v) => !v)}
+              aria-expanded={outputsOpen}
+              aria-controls={`${outputsId}-panel`}
+              className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-left text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              What you receive
+            </button>
+            {outputsOpen ? (
+              <div
+                id={`${outputsId}-panel`}
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-4"
+              >
+                <div className="grid gap-4 md:grid-cols-2">
+                  {step.outputs.map((o) => (
+                    <Card key={o.title} title={o.title} description={o.description}>
+                      {o.bullets ? (
+                        <ul className="mt-3 list-disc space-y-2 pl-5">
+                          {o.bullets.map((b) => (
+                            <li key={b}>{b}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {step.extra ? <div className="mt-10 space-y-6">{step.extra}</div> : null}
       </div>
     </section>
   );
@@ -134,185 +254,149 @@ export function StrategyPilots() {
         stepLabel: "Step 1",
         title: "Discern by Listening",
         tagline: "Shared language and grounded priorities.",
-        content: (
-          <>
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
-                  Step 1
-                </div>
-                <h3 className="mt-2 font-serif text-4xl text-white md:text-5xl">
-                  Discern by Listening
-                </h3>
-              </div>
-
-              <p className="max-w-xl text-lg text-slate-200">
-                For leadership teams who need to name what is happening, what they hope for,
-                and what they refuse to sacrifice.
-              </p>
-            </div>
-
-            <p className="mt-6 max-w-3xl text-slate-200">
-              Everyone arrives at AI from a different place. We start by listening for
-              mission, pressures, and constraints—then recommend the smallest next step
-              that brings clarity without hype or vendor capture.
-            </p>
-
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
-              <div className="space-y-4">
-                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-                  Guiding questions
-                </div>
-                <ul className="space-y-3 text-sm text-slate-100">
-                  <li>• What is our mission asking of us right now?</li>
-                  <li>• What pressures, hopes, and fears are shaping our choices?</li>
-                  <li>• What do we refuse to sacrifice as we adapt?</li>
-                  <li>• What would a faithful next step look like—for people and those we serve?</li>
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-                  Common entry points
-                </div>
-                <div className="grid gap-4">
-                  <Card
-                    title="Intro call (free)"
-                    description="A short first conversation to understand your context and name what would make the next step clearer."
-                    footnote="No prep required."
-                    accent
-                  />
-                  <Card
-                    title="AI discernment session (60–90 min)"
-                    description="A focused conversation with key decision-makers to surface pressures, hopes, constraints, and the mission logic underneath them."
-                    footnote="Leads to a Kairos Note."
-                  />
-                </div>
-                <div className="grid gap-3 md:grid-cols-2">
-                  <Card
-                    title="CST & AI foundations briefing (for boards or teams)"
-                    description="Build shared language on risks, possibilities, and CST lenses—without hype or blanket rejection."
-                  />
-                  <Card
-                    title="CST–AI lab session (by request)"
-                    description="Deeper theological grounding and practical imagination—connecting CST, real workflows, and responsible AI use."
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-                What you receive
-              </div>
-              <div className="mt-4 grid gap-6 md:grid-cols-2">
-                <Card
-                  title="Kairos Note"
-                  description="Concise written summary of your priorities, key pressures, and recommended next steps."
-                />
-                <Card
-                  title="Board-ready discernment dossier"
-                  description="Board-ready memo with decision framing, risks/benefits, and a recommended path."
-                >
-                  <ul className="mt-3 list-disc space-y-2 pl-5">
-                    <li>Decision framing and guardrails</li>
-                    <li>“What would need to be true” assumptions</li>
-                    <li>A near-term "start here" recommendation</li>
-                  </ul>
-                </Card>
-              </div>
-            </div>
-          </>
-        ),
+        summary:
+          "For leadership teams who need to name what is happening, what they hope for, and what they refuse to sacrifice.",
+        body:
+          "Everyone arrives at AI from a different place. We start by listening for mission, pressures, and constraints—then recommend the smallest next step that brings clarity without hype or vendor capture.",
+        questions: [
+          "What is our mission asking of us right now?",
+          "What pressures, hopes, and fears are shaping our choices?",
+          "What do we refuse to sacrifice as we adapt?",
+          "What would a faithful next step look like—for people and those we serve?",
+        ],
+        modules: [
+          {
+            title: "Intro call (free)",
+            description:
+              "A short first conversation to understand your context and name what would make the next step clearer.",
+            footnote: "No prep required.",
+            accent: true,
+          },
+          {
+            title: "AI discernment session (60–90 min)",
+            description:
+              "A focused conversation with key decision-makers to surface pressures, hopes, constraints, and the mission logic underneath them.",
+            footnote: "Leads to a Kairos Note.",
+          },
+          {
+            title: "CST & AI foundations briefing (for boards or teams)",
+            description:
+              "Build shared language on risks, possibilities, and CST lenses—without hype or blanket rejection.",
+          },
+          {
+            title: "CST–AI lab session (by request)",
+            description:
+              "Deeper theological grounding and practical imagination—connecting CST, real workflows, and responsible AI use.",
+          },
+        ],
+        outputs: [
+          {
+            title: "Kairos Note",
+            description: "Concise written summary of your priorities, key pressures, and recommended next steps.",
+          },
+          {
+            title: "Board-ready discernment dossier",
+            description: "Board-ready memo with decision framing, risks/benefits, and a recommended path.",
+            bullets: [
+              "Decision framing and guardrails",
+              "“What would need to be true” assumptions",
+              'A near-term "start here" recommendation',
+            ],
+          },
+        ],
       },
       {
         id: "design-decide",
         stepLabel: "Step 2",
         title: "Discern by Designing",
         tagline: "Focused options, CST guardrails, and clear choices.",
-        content: (
-          <>
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
-                  Step 2
-                </div>
-                <h3 className="mt-2 font-serif text-4xl text-white md:text-5xl">
-                  Discern by Designing
-                </h3>
-              </div>
-
-              <p className="max-w-xl text-lg text-slate-200">
-                Turn shared understanding into concrete options—with CST grounded
-                guardrails and a credible starting point.
-              </p>
-            </div>
-
-            <p className="mt-6 max-w-3xl text-slate-200">
-              When there is enough shared understanding, we move into structured
-              design work that maps real workflows, data realities, and decision
-              points—so leadership can choose deliberately.
-            </p>
-
-            <div className="mt-10 grid gap-6">
-              <Card
-                title="Discernment Sprint (2–3 weeks)"
-                description="A focused 2–3 week engagement. Through interviews, light workflow mapping, and a practical review of your data landscape (including data readiness and institutional memory practices), we propose 1–2 high‑leverage workflows where AI could help you do more with less—without compromising mission."
-              >
-                <ul className="mt-3 list-disc space-y-2 pl-5">
-                  <li>1–2 credible workflow starting points</li>
-                  <li>CST‑grounded guardrails for governance</li>
-                  <li>A recommended "start here" path</li>
-                </ul>
-              </Card>
-
-              <Card
-                title="Deep Discernment Review (for larger institutions)"
-                description="For provinces, universities, networks, or organizations with many stakeholders. We map mission, risk, and opportunity across multiple domains; review structures and incentives; and develop a short roadmap that names credible scenarios and recommends where to start."
-              >
-                <ul className="mt-3 list-disc space-y-2 pl-5">
-                  <li>Scenarios you can take to leadership/governance</li>
-                  <li>Risks, tradeoffs, and prerequisites</li>
-                  <li>A phased roadmap toward pilots</li>
-                </ul>
-              </Card>
-            </div>
-          </>
-        ),
+        summary:
+          "Turn shared understanding into concrete options—with CST grounded guardrails and a credible starting point.",
+        body:
+          "When there is enough shared understanding, we move into structured design work that maps real workflows, data realities, and decision points—so leadership can choose deliberately.",
+        questions: [
+          "Which workflow or decision is the right starting point—and why?",
+          "What are our credible options—and what are the risks?",
+          "What CST guardrails must shape our approach?",
+          "What data/readiness realities shape what's feasible right now?",
+        ],
+        modules: [
+          {
+            title: "Discernment Sprint (2–3 weeks)",
+            description:
+              "Focused interviews, workflow/data review, and working sessions to propose 1–2 high‑leverage workflows with CST-grounded guardrails.",
+            bullets: [
+              "1–2 credible workflow starting points",
+              "CST‑grounded guardrails for governance",
+              'A recommended "start here" path',
+            ],
+          },
+          {
+            title: "Deep Discernment Review (for larger institutions)",
+            description:
+              "For provinces, universities, networks, or multi-stakeholder systems: map mission, risk, and opportunity across domains; deliver a short roadmap of where to start.",
+            bullets: [
+              "Scenarios you can take to leadership/governance",
+              "Risks, tradeoffs, and prerequisites",
+              "A phased roadmap toward pilots",
+            ],
+          },
+        ],
+        outputs: [
+          {
+            title: "Pilot-ready options",
+            description:
+              "1–2 credible starting points (workflows/decisions) with rationale, risks, and CST-grounded guardrails.",
+          },
+          {
+            title: "First pilot plan",
+            description:
+              "A near-term plan: scope, success criteria, governance questions, and what to learn before expanding.",
+          },
+        ],
       },
       {
         id: "mission-impact",
         stepLabel: "Step 3",
         title: "Discern by Doing",
         tagline: "Build and pilot the plan with your teams.",
-        content: (
+        summary:
+          "Workflows and projects that put discernment into practice.",
+        body:
+          "Once a direction is chosen, we collaborate on carefully scoped workflows and projects—sometimes pilots, sometimes small internal tools—that test what's possible without over‑engineering.",
+        questions: [
+          "What can we pilot safely and quickly (without over-engineering)?",
+          "What are we learning—and what must change?",
+          "How will we measure mission-aligned impact (not just AI usage)?",
+          "What capabilities are needed to sustain this faithfully?",
+        ],
+        modules: [
+          {
+            title: "Scoped pilots",
+            description:
+              "Small, bounded pilots that reduce burden, improve quality, and build momentum—so you can learn quickly before scaling.",
+          },
+          {
+            title: "Internal tools & prototypes",
+            description:
+              "Lightweight tools that support teams where the work is already happening—without locking you into a vendor or pretending automation replaces people.",
+          },
+        ],
+        outputs: [
+          {
+            title: "A working pilot (or tested workflow)",
+            description:
+              "Something real in motion—built small, tested responsibly, and evaluated against mission-aligned criteria.",
+          },
+          {
+            title: "Lessons learned + next-step recommendations",
+            description:
+              "What worked, what didn't, and what should be true before scaling—captured in a form leadership can use.",
+          },
+        ],
+        extra: (
           <>
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
-                  Step 3
-                </div>
-                <h3 className="mt-2 font-serif text-4xl text-white md:text-5xl">
-                  Discern by Doing
-                </h3>
-              </div>
-
-              <p className="max-w-xl text-lg text-slate-200">
-                Workflows and projects that put discernment into practice.
-              </p>
-            </div>
-
-            <p className="mt-6 max-w-3xl text-slate-200">
-              Once a direction is chosen, we collaborate on carefully scoped
-              workflows and projects—sometimes pilots, sometimes small internal
-              tools—that test what's possible without over‑engineering.
-            </p>
-
-            <p className="mt-6 max-w-3xl text-slate-200">
-              Mission Impact Work usually takes place inside the mission work domains named earlier—but the exact starting point is chosen based on mission and constraint.
-            </p>
-
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
                 Areas we’re especially drawn to (examples; not rigid verticals):
               </div>
@@ -323,18 +407,7 @@ export function StrategyPilots() {
               </ul>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <Card
-                title="Scoped pilots"
-                description="Small, bounded pilots that reduce burden, improve quality, and build momentum—so you can learn quickly before scaling."
-              />
-              <Card
-                title="Internal tools & prototypes"
-                description="Lightweight tools that support teams where the work is already happening—without locking you into a vendor or pretending automation replaces people."
-              />
-            </div>
-
-            <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
                 Where pilots tend to land
               </div>

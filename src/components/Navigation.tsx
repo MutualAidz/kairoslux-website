@@ -32,7 +32,7 @@ function Navigation() {
           onClick={() => scrollToSection('hero')}
           className="text-xl font-serif font-bold text-white tracking-wide hover:text-[#f5c96c] transition-colors"
         >
-          K<span className="border-b-2 border-[#f5c96c]">ai</span>ros Lux Works
+          Kairos Lux Works
         </button>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -54,25 +54,19 @@ function Navigation() {
                   onClick={() => scrollToSection('discern-clarify')}
                   className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
                 >
-                  <span className="text-xs text-[#f5c96c]/60">Step 1 — Discern by Listening</span>
-                  <br />
-                  <span className="text-[11px] text-gray-400">Path 1 — Discern & Clarify</span>
+                  Step 1 — Discern by Listening
                 </button>
                 <button
                   onClick={() => scrollToSection('design-decide')}
                   className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
                 >
-                  <span className="text-xs text-[#f5c96c]/60">Step 2 — Discern by Designing</span>
-                  <br />
-                  <span className="text-[11px] text-gray-400">Path 2 — Design & Decide</span>
+                  Step 2 — Discern by Designing
                 </button>
                 <button
                   onClick={() => scrollToSection('mission-impact')}
                   className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
                 >
-                  <span className="text-xs text-[#f5c96c]/60">Step 3 — Discern by Doing</span>
-                  <br />
-                  <span className="text-[11px] text-gray-400">Path 3 — Mission Impact Work</span>
+                  Step 3 — Discern by Doing
                 </button>
               </div>
             )}
