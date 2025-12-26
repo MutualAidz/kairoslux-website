@@ -46,7 +46,7 @@ At the top of your response, briefly say which section(s) you’re changing, e.g
 
 “Updating Hero subheadline only.”
 
-“Rewriting the Path 2 (Design & Decide) section.”
+“Rewriting the Step 2 (Design & Decide) section.”
 
 Apply edits with discipline
 
@@ -68,7 +68,7 @@ REQ‑02 (hero includes “the kind of economy Christ calls us to build”): [OK
 
 REQ‑03 (tagline “Catholic Social Teaching, engineered for AI.”): [OK / MISSING]
 
-REQ‑05–08 (three‑path structure present?): [OK / PARTIAL / MISSING]
+REQ‑05–08 (three‑step structure present?): [OK / PARTIAL / MISSING]
 
 REQ‑20 (data sovereignty signal): [OK / MISSING]
 

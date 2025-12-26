@@ -179,13 +179,34 @@ Changes:
 - Renamed Path 1 formation offering from “CST & AI Foundations Seminar” to “CST & AI Foundations Briefing.”
 - Bumped Master Control Spec to v0.3 and aligned canonical copy.
 
+ Spec compliance:
+ - Keeps required Path 1 formation offering while preventing regression to “Seminar” language.
+
+ Decision:
+ Adopted.
+
+7. Steps-only flow (remove Path naming requirement)
+
+Version ID:
+SPEC_v0.4_Steps_only
+
+Date:
+2025-12-26
+
+Source:
+Founder decision
+
+Changes:
+- Removed Path 1/2/3 naming requirement; Steps-only is now canonical.
+- Updated Master Control Spec to v0.4 and aligned canonical copy, UI/UX checklist, and LLM prompt.
+
 Spec compliance:
-- Keeps required Path 1 formation offering while preventing regression to “Seminar” language.
+- Ensures the journey uses the three-step structure without requiring “Path” language in UI or accessibility.
 
 Decision:
 Adopted.
 
-7. Future versions
+8. Future versions
 
 
 For each future version (e.g., Site_v1_live, Site_v1.1, Bolt_v4_components), add a section like:

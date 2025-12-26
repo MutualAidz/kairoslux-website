@@ -1,4 +1,4 @@
-Kairos Lux Works – Master Control Specification (v0.3)
+Kairos Lux Works – Master Control Specification (v0.4)
 
 These are the source-of-truth constraints for all work on the Kairos Lux Works website, copy, and related materials.
 
@@ -120,36 +120,36 @@ You may also expose felix@kairoslux.ai
 
 for deeper partnership / funding conversations.
 
-Service Architecture – “The Paths”
+Service Architecture – Discernment steps
 
 All services must be intelligible as a flow:
 
-Discern & Clarify → Design & Decide → Mission Impact Work (three paths)
+Discern & Clarify → Design & Decide → Mission Impact Work (three steps)
 
 REQ‑05 – Flow Naming
-Use the three‑path language explicitly somewhere:
+Use steps-only language (Path naming removed; Steps-only is canonical):
 
-Path 1: Discern & Clarify
+Step 1: Discern & Clarify (Discern by Listening)
 
-Path 2: Design & Decide
+Step 2: Design & Decide (Discern by Designing)
 
-Path 3: Mission Impact Work
+Step 3: Mission Impact Work (Discern by Doing)
 
-REQ‑06 – Path 1 (Discern & Clarify)
+REQ‑06 – Step 1 (Discern & Clarify)
 Must include both of these named offerings (even if lightly):
 
 “AI Discernment Call” (initial triage / discovery).
 
 “CST & AI Foundations Briefing” (leadership / board formation).
 
-REQ‑07 – Path 2 (Design & Decide)
+REQ‑07 – Step 2 (Design & Decide)
 Must include:
 
 “Discernment Sprint” (2–3 weeks; strategy + readiness).
 
 “Deep Discernment Review” (for larger networks / federations).
 
-REQ‑08 – Path 3 (Mission Impact Work)
+REQ‑08 – Step 3 (Mission Impact Work)
 Must make clear that we gravitate toward:
 
 Relationship & Capital Intelligence (donors, investors, stakeholders).
@@ -295,17 +295,17 @@ REQ‑22 – “Mission work domains” must appear directly after Compass pract
   6) Institutional memory
 - This grid exists to help visitors recognize their work quickly (before reading the journey/steps).
 
-REQ‑23 – The three paths must be presented as “Discernment steps” (UI) while preserving “Path 1/2/3” naming (requirements)
-- The service flow remains: Path 1 (Discern & Clarify) → Path 2 (Design & Decide) → Path 3 (Mission Impact Work). (REQ‑05 remains in force.)
-- UI labels may use clearer, parallel “Discernment steps” language, e.g.:
-  - Step 1 — Discern by Listening (Path 1 — Discern & Clarify)
-  - Step 2 — Discern by Designing (Path 2 — Design & Decide)
-  - Step 3 — Discern by Doing (Path 3 — Mission Impact Work)
-- The page must still include the “Path 1/Path 2/Path 3” language explicitly somewhere (visible or accessible text) to satisfy REQ‑05.
+REQ‑23 – The three steps must be presented as “Discernment steps” (UI)
+- The service flow remains: Step 1 (Discern & Clarify) → Step 2 (Design & Decide) → Step 3 (Mission Impact Work).
+- UI labels should use clear, parallel “Discernment steps” language, e.g.:
+  - Step 1 — Discern by Listening (Discern & Clarify)
+  - Step 2 — Discern by Designing (Design & Decide)
+  - Step 3 — Discern by Doing (Mission Impact Work)
+- Path naming is not required in visible or accessible text.
 
-REQ‑24 – The path/step arc must be consolidated with progressive disclosure (not three long vertical sections)
-- Do not render both (a) an overview row of the three paths and (b) three fully expanded vertical sections beneath it.
-- Present the three paths/steps as a single consolidated “journey” module:
+REQ‑24 – The step arc must be consolidated with progressive disclosure (not three long vertical sections)
+- Do not render both (a) an overview row of the three steps and (b) three fully expanded vertical sections beneath it.
+- Present the three steps as a single consolidated “journey” module:
   - Desktop: horizontal stepper/tabs controlling one active panel by default.
   - Mobile: stacked accordion (one open by default).
   - Optional: “Show all steps” toggle for deep readers.
@@ -319,5 +319,5 @@ REQ‑26 – No duplication of mission domains
 - Mission work domains should appear once (under Compass).
 - Step 3 / Mission Impact Work should reference those domains (and describe what “discern by doing” involves) rather than repeating the full domain card grid again.
 
-End of v0.3.
-If you need to change any NN or REQ, bump the version (v0.4, v0.5…) and track changes in the revision log.
+End of v0.4.
+If you need to change any NN or REQ, bump the version (v0.5, v0.6…) and track changes in the revision log.

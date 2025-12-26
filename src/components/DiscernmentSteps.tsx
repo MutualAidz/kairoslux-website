@@ -4,8 +4,6 @@ type StepKey = "discern-clarify" | "design-decide" | "mission-impact";
 
 type Step = {
   key: StepKey;
-  pathLabel: string;
-  legacyTitle: string;
   stepLabel: string;
   stepTitle: string;
   oneLiner: string;
@@ -51,8 +49,6 @@ export default function DiscernmentSteps() {
     () => [
       {
         key: "discern-clarify",
-        pathLabel: "Path 1",
-        legacyTitle: "Discern & Clarify",
         stepLabel: "Step 1",
         stepTitle: "Discern by Listening",
         oneLiner:
@@ -105,8 +101,6 @@ export default function DiscernmentSteps() {
       },
       {
         key: "design-decide",
-        pathLabel: "Path 2",
-        legacyTitle: "Design & Decide",
         stepLabel: "Step 2",
         stepTitle: "Discern by Designing",
         oneLiner:
@@ -161,8 +155,6 @@ export default function DiscernmentSteps() {
       },
       {
         key: "mission-impact",
-        pathLabel: "Path 3",
-        legacyTitle: "Mission Impact Work",
         stepLabel: "Step 3",
         stepTitle: "Discern by Doing",
         oneLiner:
@@ -305,10 +297,6 @@ export default function DiscernmentSteps() {
       >
         <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="text-xs font-semibold tracking-[0.2em] text-white/70">
-              {s.pathLabel} — {s.legacyTitle}
-            </p>
-            <span className="sr-only">{s.pathLabel} — {s.legacyTitle}</span>
             <h3 className="mt-2 text-2xl font-semibold text-white">
               {s.stepLabel}: {s.stepTitle}
             </h3>
@@ -450,7 +438,6 @@ export default function DiscernmentSteps() {
                     {s.stepLabel}
                   </p>
                   <p className="mt-2 text-xl font-semibold text-white">{s.stepTitle}</p>
-                  <span className="sr-only">{s.pathLabel} — {s.legacyTitle}</span>
                 </button>
               );
             })}

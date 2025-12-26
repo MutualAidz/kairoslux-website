@@ -80,7 +80,7 @@ We use these practices to redesign mission work in common pressure points like t
 
 Mission work domains (6-card grid; appears immediately after Compass practices):
 Intro line:
-Common workflows where AI can help to relieve reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work—so institutions can move deliberately to heal and serve.
+Common workflows where AI can help to reduce reporting and coordination burdens, to free more time for people and presence, and to support more dignified, creative work—so institutions can move deliberately to heal and serve.
 
 Domains:
 Stakeholder & relationship operations
@@ -101,28 +101,28 @@ Clarifying what data you have, what you need, and what is realistic—so AI deci
 Institutional memory
 Documents, policies, precedents, and shared knowledge—so decisions are made with continuity, context, and the wisdom already present in the institution.
 
-4. Three paths: from discernment to mission impact
+4. Three steps: from discernment to mission impact
 
 Section heading:
-Three paths (presented as discernment steps)
+Three steps (discernment journey)
 
 Intro:
-Every institution arrives with different pressures, assets, and constraints. We structure work in three paths that can stand alone or build on each other—and we present them as three discernment steps so the progression is easy to grasp:
+Every institution arrives with different pressures, assets, and constraints. We structure work in three steps that can stand alone or build on each other—and we present them as discernment steps so the progression is easy to grasp:
 
-Path 1 – Discern & Clarify → Path 2 – Design & Decide → Path 3 – Mission Impact Work
+Step 1 — Discern & Clarify → Step 2 — Design & Decide → Step 3 — Mission Impact Work
 
 UI labels (recommended):
-Step 1 — Discern by Listening (Path 1 — Discern & Clarify)
-Step 2 — Discern by Designing (Path 2 — Design & Decide)
-Step 3 — Discern by Doing (Path 3 — Mission Impact Work)
+Step 1 — Discern by Listening (Discern & Clarify)
+Step 2 — Discern by Designing (Design & Decide)
+Step 3 — Discern by Doing (Mission Impact Work)
 
-Step 1 — Discern by Listening (Path 1 — Discern & Clarify)
+Step 1 — Discern by Listening (Discern & Clarify)
 
 Purpose:
 Build shared understanding in light of mission: name what is happening, what you hope for, and what you refuse to sacrifice.
 
 Offer 1 – AI Discernment Call
-A 60–90 minute working session with key decision‑makers to surface pressures, hopes, constraints, current experiments, and mission logic. You leave with a short written summary and a recommended next step.
+A 60–90 minute working session with key decision‑makers to surface pressures, hopes, constraints, current initiatives, and mission logic. You leave with a short written summary and a recommended next step.
 
 Offer 2 – CST & AI Foundations Briefing
 A tailored session for your leadership team, board, or AI task force. We connect your context with Catholic Social Teaching and concrete examples from similar institutions. The goal is shared language and clarity—without hype or blanket rejection.
@@ -137,7 +137,7 @@ A concise written summary: what we heard, how it looks through CST, and a recomm
 Board‑ready Discernment Dossier (deeper)
 A board/leadership memo translating discernment into governance: context, credible options, risks/tradeoffs, guardrails, and a recommended “start here.”
 
-Step 2 — Discern by Designing (Path 2 — Design & Decide)
+Step 2 — Discern by Designing (Design & Decide)
 
 Purpose:
 Translate shared values into concrete options, guardrails, and a first pilot plan.
@@ -148,7 +148,7 @@ Short, focused work with a small internal team. We do a light review of workflow
 Offer 4 – Deep Discernment Review (for networks and federations)
 For larger networks (provinces, dioceses, federations, university systems), we extend the sprint into a deeper review. We surface shared pain points, align on CST‑grounded guardrails, and deliver a short roadmap that names credible scenarios and recommends where to start.
 
-Step 3 — Discern by Doing (Path 3 — Mission Impact Work)
+Step 3 — Discern by Doing (Mission Impact Work)
 
 Purpose:
 Pilot the plan with your teams—learning by building in real workflows without over‑engineering.
@@ -172,7 +172,7 @@ Section heading:
 Formation for leaders who need clarity, not hype
 
 Body:
-Where it serves the mission, we can shape deeper, repeated formation offers for boards, leadership teams, or practitioners. These build on Path 1 and Path 2, helping people live with new tools in a way that is spiritually grounded and practically realistic. Formation is always about clarifying what is at stake, naming genuine risks, and opening up hopeful, mission‑aligned action.
+Where it serves the mission, we can shape deeper, repeated formation offers for boards, leadership teams, or practitioners. These build on Step 1 and Step 2, helping people live with new tools in a way that is spiritually grounded and practically realistic. Formation is always about clarifying what is at stake, naming genuine risks, and opening up hopeful, mission‑aligned action.
 
 (Exact formats—seminars, short cohorts, learning circles—can be adapted to context without over‑promising.)
 
@@ -209,7 +209,7 @@ Section heading:
 Coming soon: Kairos Circuit
 
 Body:
-Kairos Circuit will be a periodic dispatch on Catholic AI: what Pope Leo XIV and other Church voices are saying, how Catholic institutions are experimenting with AI, and where Spirit‑led creativity is emerging. It is meant for leaders who want to stay informed without drowning in noise.
+Kairos Circuit will be a periodic dispatch on Catholic AI: what Pope Leo XIV and other Church voices are saying, how Catholic institutions are navigating AI, and where Spirit‑led creativity is emerging. It is meant for leaders who want to stay informed without drowning in noise.
 
 It will sit under Kairos Lux Works LLC, in conversation with Kairos Labs as that research work develops.
 
