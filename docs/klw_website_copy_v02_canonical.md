@@ -232,5 +232,5 @@ For deeper conversations about long‑term partnership, funding Kairos Labs, or 
 
 .
 
-End of Canonical Website Copy v0.1.
+End of Canonical Website Copy v0.2.
 Future revisions should update the version number and be logged in the revision history file.

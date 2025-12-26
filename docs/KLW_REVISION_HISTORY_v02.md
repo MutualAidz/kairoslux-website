@@ -1,4 +1,4 @@
-Kairos Lux Works – Revision History & Feedback Log (v0.1)
+Kairos Lux Works – Revision History & Feedback Log (v0.2)
 
 Use this file to track how the website copy and structure evolve over time, and how each version relates to the Master Control Spec.
 
@@ -177,4 +177,4 @@ Feedback:
 Spec compliance:
 Decision:
 
-End of Revision History Log v0.1.
+End of Revision History Log v0.2.
