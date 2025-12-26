@@ -1,4 +1,4 @@
-Kairos Lux Works – Master Control Specification (v0.2)
+Kairos Lux Works – Master Control Specification (v0.3)
 
 These are the source-of-truth constraints for all work on the Kairos Lux Works website, copy, and related materials.
 
@@ -140,7 +140,7 @@ Must include both of these named offerings (even if lightly):
 
 “AI Discernment Call” (initial triage / discovery).
 
-“CST & AI Foundations Seminar” (leadership / board formation).
+“CST & AI Foundations Briefing” (leadership / board formation).
 
 REQ‑07 – Path 2 (Design & Decide)
 Must include:
@@ -319,5 +319,5 @@ REQ‑26 – No duplication of mission domains
 - Mission work domains should appear once (under Compass).
 - Step 3 / Mission Impact Work should reference those domains (and describe what “discern by doing” involves) rather than repeating the full domain card grid again.
 
-End of v0.2.
-If you need to change any NN or REQ, bump the version (v0.3, v0.4…) and track changes in the revision log.
+End of v0.3.
+If you need to change any NN or REQ, bump the version (v0.4, v0.5…) and track changes in the revision log.

@@ -164,7 +164,28 @@ Spec compliance notes:
 Decision:
 Partially adopted. Next implementation milestone is the consolidated “Discernment steps” journey module with progressive disclosure and (optionally) scroll‑synced highlighting.
 
-6. Future versions
+6. Spec v0.3 – Seminar → Briefing rename
+
+Version ID:
+SPEC_v0.3_Seminar_to_Briefing
+
+Date:
+2024-12-24
+
+Source:
+Founder decision
+
+Changes:
+- Renamed Path 1 formation offering from “CST & AI Foundations Seminar” to “CST & AI Foundations Briefing.”
+- Bumped Master Control Spec to v0.3 and aligned canonical copy.
+
+Spec compliance:
+- Keeps required Path 1 formation offering while preventing regression to “Seminar” language.
+
+Decision:
+Adopted.
+
+7. Future versions
 
 
 For each future version (e.g., Site_v1_live, Site_v1.1, Bolt_v4_components), add a section like:

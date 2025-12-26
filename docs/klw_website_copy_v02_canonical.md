@@ -124,7 +124,7 @@ Build shared understanding in light of mission: name what is happening, what you
 Offer 1 – AI Discernment Call
 A 60–90 minute working session with key decision‑makers to surface pressures, hopes, constraints, current experiments, and mission logic. You leave with a short written summary and a recommended next step.
 
-Offer 2 – CST & AI Foundations Seminar
+Offer 2 – CST & AI Foundations Briefing
 A tailored session for your leadership team, board, or AI task force. We connect your context with Catholic Social Teaching and concrete examples from similar institutions. The goal is shared language and clarity—without hype or blanket rejection.
 
 (Optional module – by request) CST–AI Lab / cohort format
