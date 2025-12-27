@@ -49,24 +49,27 @@ function Navigation() {
               <ChevronDown className="w-3 h-3" />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2">
+              <div className="absolute top-full left-0 mt-2 min-w-[16rem] bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2">
                 <button
                   onClick={() => scrollToSection('discern-clarify')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
                 >
-                  Step 1 — Discern by Listening
+                  <span className="text-[#f5c96c] font-semibold">Step 1</span>
+                  <span>— Discern by Listening</span>
                 </button>
                 <button
                   onClick={() => scrollToSection('design-decide')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
                 >
-                  Step 2 — Discern by Designing
+                  <span className="text-[#f5c96c] font-semibold">Step 2</span>
+                  <span>— Discern by Designing</span>
                 </button>
                 <button
                   onClick={() => scrollToSection('mission-impact')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-200 hover:text-[#f5c96c] hover:bg-white/5 transition-colors"
+                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
                 >
-                  Step 3 — Discern by Doing
+                  <span className="text-[#f5c96c] font-semibold">Step 3</span>
+                  <span>— Discern by Doing</span>
                 </button>
               </div>
             )}
