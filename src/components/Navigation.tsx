@@ -4,12 +4,38 @@ import { ChevronDown } from 'lucide-react';
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeStep, setActiveStep] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      const stepIds = [
+        { id: 'discern-clarify', key: 'discern-clarify' },
+        { id: 'design-decide', key: 'design-decide' },
+        { id: 'mission-impact', key: 'mission-impact' },
+      ];
+
+      const viewportOffset = 140; // account for sticky nav
+      let closestKey: string | null = null;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      stepIds.forEach(({ id, key }) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const distance = Math.abs(rect.top - viewportOffset);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestKey = key;
+        }
+      });
+
+      setActiveStep(closestKey);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -52,21 +78,33 @@ function Navigation() {
               <div className="absolute top-full left-0 mt-2 min-w-[16rem] bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2">
                 <button
                   onClick={() => scrollToSection('discern-clarify')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
+                  className={`w-full text-left px-4 py-2 text-sm transition-colors whitespace-nowrap leading-tight flex items-center gap-2 hover:text-white hover:bg-[#f5c96c]/10 ${
+                    activeStep === 'discern-clarify'
+                      ? 'text-white bg-white/5 border-l-2 border-[#f5c96c]'
+                      : 'text-gray-100'
+                  }`}
                 >
                   <span className="text-[#f5c96c] font-semibold">Step 1</span>
                   <span>— Discern by Listening</span>
                 </button>
                 <button
                   onClick={() => scrollToSection('design-decide')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
+                  className={`w-full text-left px-4 py-2 text-sm transition-colors whitespace-nowrap leading-tight flex items-center gap-2 hover:text-white hover:bg-[#f5c96c]/10 ${
+                    activeStep === 'design-decide'
+                      ? 'text-white bg-white/5 border-l-2 border-[#f5c96c]'
+                      : 'text-gray-100'
+                  }`}
                 >
                   <span className="text-[#f5c96c] font-semibold">Step 2</span>
                   <span>— Discern by Designing</span>
                 </button>
                 <button
                   onClick={() => scrollToSection('mission-impact')}
-                  className="w-full text-left px-4 py-2 text-sm text-gray-100 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap leading-tight flex items-center gap-2"
+                  className={`w-full text-left px-4 py-2 text-sm transition-colors whitespace-nowrap leading-tight flex items-center gap-2 hover:text-white hover:bg-[#f5c96c]/10 ${
+                    activeStep === 'mission-impact'
+                      ? 'text-white bg-white/5 border-l-2 border-[#f5c96c]'
+                      : 'text-gray-100'
+                  }`}
                 >
                   <span className="text-[#f5c96c] font-semibold">Step 3</span>
                   <span>— Discern by Doing</span>
