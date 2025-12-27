@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-labelledby="title desc">
+  <!-- logo-klw -->
+  <title>Kairos Lux Works logo</title>
+  <desc>KLW monogram placeholder</desc>
+  <rect x="1.5" y="1.5" width="177" height="45" rx="12" fill="none" stroke="#f5c96c" stroke-width="3"/>
+  <text x="90" y="30" text-anchor="middle" font-family="\"Times New Roman\", serif" font-size="24" font-weight="700" fill="#f5c96c">
+    KLW
+  </text>
+</svg>

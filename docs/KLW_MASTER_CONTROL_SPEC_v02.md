@@ -246,7 +246,7 @@ Labs / Vision: /images/labs-arched-path.png
 
 About: /images/about-cross.png
 
-Logo: /images/logo-klw.png
+Logo: /images/logo-klw.svg
 
 REQ‑19 – Tech Stack
 Default tech stack for this site is:

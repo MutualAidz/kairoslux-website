@@ -206,7 +206,28 @@ Spec compliance:
 Decision:
 Adopted.
 
-8. Future versions
+8. Header logo SVG & REQ-18 alignment
+
+Version ID:
+SITE_Header_SVG_Logo
+
+Date:
+2025-12-26
+
+Source:
+Codex
+
+Changes:
+- Added KLW SVG logo to the header brand cluster linking to home with a visible focus state.
+- Updated Master Control Spec REQ‑18 logo path to /images/logo-klw.svg to match implementation.
+
+Spec compliance:
+- Uses SVG for crisp scaling on dark header and aligns REQ‑18 image path with the shipped asset.
+
+Decision:
+Adopted.
+
+9. Future versions
 
 
 For each future version (e.g., Site_v1_live, Site_v1.1, Bolt_v4_components), add a section like:

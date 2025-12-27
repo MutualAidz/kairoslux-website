@@ -71,12 +71,20 @@ function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button
-          onClick={() => scrollToSection('hero')}
-          className="text-xl font-serif font-bold text-white tracking-wide hover:text-[#f5c96c] transition-colors"
+        <a
+          href="/"
+          className="flex items-center gap-3 rounded-md text-white transition-colors hover:text-[#f5c96c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5c565] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+          aria-label="Kairos Lux Works — Home"
         >
-          Kairos Lux Works
-        </button>
+          <img
+            src="/images/logo-klw.svg"
+            alt="Kairos Lux Works logo"
+            className="h-8 w-auto"
+          />
+          <span className="font-serif font-bold text-xl tracking-wide">
+            Kairos Lux Works
+          </span>
+        </a>
 
         <div className="hidden md:flex items-center space-x-8">
           <div
