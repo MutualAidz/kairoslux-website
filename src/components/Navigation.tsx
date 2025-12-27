@@ -77,7 +77,7 @@ function Navigation() {
           aria-label="Kairos Lux Works — Home"
         >
           <img
-            src="/images/logo-klw-cutout.svg"
+            src="/images/logo-klw.svg"
             alt="Kairos Lux Works logo"
             className="h-9 w-auto"
           />
