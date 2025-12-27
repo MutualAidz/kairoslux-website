@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeStep, setActiveStep] = useState<string | null>(null);
+  const closeTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +40,22 @@ function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const openDropdown = () => {
+    if (closeTimeout.current) {
+      window.clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    // slight delay to allow moving from trigger to menu without collapse
+    closeTimeout.current = window.setTimeout(() => {
+      setIsDropdownOpen(false);
+      closeTimeout.current = null;
+    }, 150);
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -64,8 +81,8 @@ function Navigation() {
         <div className="hidden md:flex items-center space-x-8">
           <div
             className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdown}
           >
             <button
               onClick={() => scrollToSection('compass')}
@@ -75,7 +92,11 @@ function Navigation() {
               <ChevronDown className="w-3 h-3" />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 min-w-[16rem] bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2">
+              <div
+                className="absolute top-full left-0 mt-2 min-w-[16rem] bg-gray-900/95 backdrop-blur-sm border border-[#f5c96c]/30 rounded-lg shadow-xl py-2"
+                onMouseEnter={openDropdown}
+                onMouseLeave={closeDropdown}
+              >
                 <button
                   onClick={() => scrollToSection('discern-clarify')}
                   className={`w-full text-left px-4 py-2 text-sm transition-colors whitespace-nowrap leading-tight flex items-center gap-2 hover:text-white hover:bg-[#f5c96c]/10 ${
