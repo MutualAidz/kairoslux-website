@@ -28,12 +28,10 @@ Needs:
 - Add to AI_WORKFLOW_SOP + KLW_LLM_COLLAB_PROMPT + Project Instructions.
 
 Q-003 — “Seminar” vs “Briefing” naming
-Status: DECIDED (Briefing preferred) — but requires SSOT version bump
-Why: Current spec REQ-06 uses “Seminar”; founder prefers “Briefing”.
+Status: LOGGED
+Why: Spec v0.4 + revision history now adopt “Briefing” in REQ-06 and canonical copy.
 Needs:
-- Update KLW_MASTER_CONTROL_SPEC_v02.md (bump to v0.3 and log).
-- Update KLW_WEBSITE_COPY_v02_CANONICAL.md accordingly.
-- Verify site copy matches.
+- Remove once upstream repos are synced (nothing else required).
 
 Q-004 — Remove visible “Path X — …” lines in Steps UI
 Status: DECIDED
@@ -61,6 +59,13 @@ Why: Founder wants to try Option B first.
 Needs:
 - Implement alternative layout experiment with titles-only domains.
 - Decide if domains expand on click (Option C) or remain titles only.
+
+Q-008 — README/SOP SSOT links (v02)
+Status: IMPLEMENTED (needs verification/commit)
+Why: README + SOP were updated to v02 SSOT links; keep until verified and pushed.
+Needs:
+- Confirm README.md and SOP.md point to v02 files in main branch.
+- Remove after verification and commit/push are done.
 
 Housekeeping:
 - Keep this file under ~2 pages. When an item becomes DONE, delete it from the queue.

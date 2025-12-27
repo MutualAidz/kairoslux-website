@@ -1,3 +1,5 @@
+DEPRECATED: Use `docs/KLW_REVISION_HISTORY_v02.md` (v0.2) as the active log. This file is retained only as legacy reference.
+
 Kairos Lux Works – Revision History & Feedback Log (v0.1)
 
 Use this file to track how the website copy and structure evolve over time, and how each version relates to the Master Control Spec.
