@@ -66,11 +66,11 @@ function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 ${
         isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto w-full py-4 flex items-center justify-between">
         <a
           href="/"
           className="flex items-center gap-3 rounded-md text-white transition-colors hover:text-[#f5c96c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5c565] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
