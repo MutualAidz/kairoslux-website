@@ -70,16 +70,16 @@ function Navigation() {
         isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto w-full py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto w-full py-3 flex items-center justify-between">
         <a
           href="/"
-          className="flex items-center gap-3 rounded-md text-white transition-colors hover:text-[#f5c96c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5c565] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+          className="flex items-center gap-2 rounded-md text-white transition-colors hover:text-[#f5c96c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5c565] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
           aria-label="Kairos Lux Works — Home"
         >
           <img
             src="/images/logo-klw.svg"
             alt="Kairos Lux Works logo"
-            className="h-8 w-auto"
+            className="h-7 w-auto"
           />
           <span className="font-serif font-bold text-xl tracking-wide">
             Kairos Lux Works
