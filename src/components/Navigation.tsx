@@ -79,7 +79,7 @@ function Navigation() {
           <img
             src="/images/logo-klw.svg"
             alt="Kairos Lux Works logo"
-            className="h-7 w-auto"
+            className="h-8 w-auto"
           />
           <span className="font-serif font-bold text-xl tracking-wide">
             Kairos Lux Works
